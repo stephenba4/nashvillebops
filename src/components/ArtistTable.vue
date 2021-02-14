@@ -3,27 +3,56 @@
     <h1>{{ msg }}</h1>
     <b-container>
       <b-table
-        :fields="fields"
-        :items="items"
+        :fields="monthlyListenerFields"
+        :items="monthlyListenerItems"
+        :per-page="perPage"
+        :current-page="currentPage"
+        :filter="filter"
         caption-top
         striped
-        responsive="sm"
+        responsive
         bordered
         small
+        stacked="md"
       >
         <template #table-caption>
           Spotify Monthly Listeners
+          <b-form-group
+            class="w-25 m-1"
+            style="float: right;"
+          >
+            <b-input-group size="sm">
+              <b-form-input
+                id="filter-input"
+                v-model="filter"
+                type="search"
+                placeholder="Type to Search"
+              />
+
+              <b-input-group-append>
+                <b-button :disabled="!filter" @click="filter = ''">
+                  Clear
+                </b-button>
+              </b-input-group-append>
+            </b-input-group>
+          </b-form-group>
         </template>
       </b-table>
+      <b-pagination
+        v-model="currentPage"
+        :total-rows="rows"
+        :per-page="perPage"
+        style="float: right;"
+        class="m-1"
+      />
     </b-container>
   </div>
 </template>
 
 <script>
-import monthlyListenerData from '@/data/MonthlyListenerData'
+import { mapGetters } from 'vuex';
 
 export default {
-  name: 'ArtistTable',
   props: {
     msg: {
       type: String,
@@ -32,9 +61,22 @@ export default {
   },
   data() {
     return {
-      fields: monthlyListenerData.fields,
-      items: monthlyListenerData.items,
+      perPage: 10,
+      currentPage: 1,
+      filter: null,
     }
+  },
+  computed: {
+    rows() {
+      return this.monthlyListenerItems.length;
+    },
+    monthlyListenerFields() {
+      return this.getMonthlyListenerFields;
+    },
+    monthlyListenerItems() {
+      return this.getMonthlyListenerItems;
+    },
+    ...mapGetters(['getMonthlyListenerFields', 'getMonthlyListenerItems']),
   },
 };
 </script>
