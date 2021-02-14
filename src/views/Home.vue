@@ -1,6 +1,8 @@
 <template>
   <div class="home">
-    <ArtistTable msg="Nashville Bops" />
+    <b-container>
+      <ArtistTable msg="Nashville Bops" />
+    </b-container>
   </div>
 </template>
 
@@ -8,7 +10,6 @@
 import ArtistTable from '@/components/ArtistTable.vue';
 
 export default {
-  name: 'Home',
   components: {
     ArtistTable,
   },
