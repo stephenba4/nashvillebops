@@ -23,7 +23,7 @@ export default {
         { number: 2, artist: 'Britney Spears', monthlyListeners: 90 },
         { number: 3, artist: 'Chris Brown', monthlyListeners: 80 },
       ],
-    };
+    }
   },
 };
 </script>
