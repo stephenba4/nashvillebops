@@ -14,6 +14,7 @@
         bordered
         small
         stacked="md"
+        @row-clicked="redirect"
       >
         <template #table-caption>
           Spotify Monthly Listeners
@@ -77,6 +78,11 @@ export default {
       return this.getMonthlyListenerItems;
     },
     ...mapGetters(['getMonthlyListenerFields', 'getMonthlyListenerItems']),
+  },
+  methods: {
+    redirect(_, i) {
+      this.$router.push(`/artistDetailsParent/${i}`)
+    },
   },
 };
 </script>

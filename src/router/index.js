@@ -1,5 +1,7 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
+import ArtistDetails from '@/components/ArtistDetails.vue';
+import ArtistDetailsParent from '@/components/ArtistDetailsParent.vue';
 import Home from '../views/Home.vue';
 
 Vue.use(VueRouter);
@@ -18,9 +20,21 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue'),
   },
+  {
+    path: 'artistDetailsParent/:id',
+    component: ArtistDetailsParent,
+    children: [
+      {
+        path: '',
+        name: 'Artist Details',
+        component: ArtistDetails,
+      },
+    ],
+  },
 ];
 
 const router = new VueRouter({
+  mode: 'history',
   routes,
 });
 
