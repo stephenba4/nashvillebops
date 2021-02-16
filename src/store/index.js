@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-import monthlyListenerData from '@/data/monthlyListenerData';
+import monthlyListenerData from '@/data/MonthlyListenerData';
 
 Vue.use(Vuex);
 
