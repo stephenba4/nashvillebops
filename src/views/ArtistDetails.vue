@@ -1,15 +1,15 @@
 <template>
   <div>
-    hi
+    <ArtistStats />
   </div>
 </template>
 
 <script>
-export default {
+import ArtistStats from '@/components/ArtistStats.vue';
 
+export default {
+  components: {
+    ArtistStats,
+  },
 }
 </script>
-
-<style>
-
-</style>

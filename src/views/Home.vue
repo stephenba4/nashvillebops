@@ -1,7 +1,7 @@
 <template>
-  <div class="home">
+  <div>
     <b-container>
-      <ArtistTable msg="Nashville Bops" />
+      <ArtistTable />
     </b-container>
   </div>
 </template>

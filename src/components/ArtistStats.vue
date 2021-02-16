@@ -1,6 +1,6 @@
 <template>
   <div>
-    details
+    <b-img src="./../assets/nelly.png" height="150" />
   </div>
 </template>
 
