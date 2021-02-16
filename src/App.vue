@@ -1,13 +1,13 @@
 <template>
   <div id="app">
-    <div id="nav">
+    <b-navbar id="navbar">
       <router-link to="/">
-        Home
-      </router-link> |
-      <router-link to="/about">
-        About
+        <b-navbar-brand>
+          <b-img src="./assets/logo.png" height="60" />
+        </b-navbar-brand>
       </router-link>
-    </div>
+    </b-navbar>
+
     <router-view />
   </div>
 </template>
@@ -20,17 +20,7 @@
   text-align: center;
   color: #2c3e50;
 }
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+#navbar {
+  background-color: #FDA0D8;
 }
 </style>

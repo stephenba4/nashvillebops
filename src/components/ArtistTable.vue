@@ -1,6 +1,5 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
+  <div>
     <b-container>
       <b-table
         :fields="monthlyListenerFields"
@@ -54,12 +53,6 @@
 import { mapGetters } from 'vuex';
 
 export default {
-  props: {
-    msg: {
-      type: String,
-      default: '',
-    },
-  },
   data() {
     return {
       perPage: 10,
@@ -81,7 +74,7 @@ export default {
   },
   methods: {
     redirect(_, i) {
-      this.$router.push(`/artistDetailsParent/${i}`)
+      this.$router.push(`/artistDetails/${i}`)
     },
   },
 };
