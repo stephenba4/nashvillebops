@@ -1,13 +1,12 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-import monthlyListenerData from '@/data/MonthlyListenerData';
+import fakeData from '@/data/fakeData';
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    monthlyListenerFields: monthlyListenerData.fields,
-    monthlyListenerItems: monthlyListenerData.items,
+    fakeData,
   },
   mutations: {
   },
@@ -16,11 +15,8 @@ export default new Vuex.Store({
   modules: {
   },
   getters: {
-    getMonthlyListenerFields(state) {
-      return state.monthlyListenerFields;
-    },
-    getMonthlyListenerItems(state) {
-      return state.monthlyListenerItems;
+    getFakeData(state) {
+      return state.fakeData;
     },
   },
 });

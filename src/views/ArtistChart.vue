@@ -2,8 +2,8 @@
   <div>
     <b-container>
       <b-table
-        :fields="monthlyListenerFields"
-        :items="monthlyListenerItems"
+        :fields="fakeData.artistChartFields"
+        :items="fakeData.artistChartItems"
         :per-page="perPage"
         :current-page="currentPage"
         :filter="filter"
@@ -16,7 +16,7 @@
         @row-clicked="redirect"
       >
         <template #table-caption>
-          Spotify Monthly Listeners
+          A curated chart for the hottest pop artists in Nashville
           <b-form-group
             class="w-25 m-1"
             style="float: right;"
@@ -58,23 +58,20 @@ export default {
       perPage: 10,
       currentPage: 1,
       filter: null,
+      fakeData: {},
+      rows: null,
     }
   },
   computed: {
-    rows() {
-      return this.monthlyListenerItems.length;
-    },
-    monthlyListenerFields() {
-      return this.getMonthlyListenerFields;
-    },
-    monthlyListenerItems() {
-      return this.getMonthlyListenerItems;
-    },
-    ...mapGetters(['getMonthlyListenerFields', 'getMonthlyListenerItems']),
+    ...mapGetters(['getFakeData']),
+  },
+  mounted() {
+    this.fakeData = this.getFakeData;
+    this.rows = this.getFakeData.artistChartItems.length
   },
   methods: {
-    redirect(_, i) {
-      this.$router.push(`/artistDetails/${i}`)
+    redirect(row) {
+      this.$router.push({ name: 'Artist Details', params: { id: row.id } })
     },
   },
 };
