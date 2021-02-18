@@ -1,10 +1,10 @@
 export default {
-  fields: [
+  artistChartFields: [
     { key: 'number', sortable: true },
     { key: 'artist', sortable: true },
     { key: 'monthly_listeners', sortable: true },
   ],
-  items: [
+  artistChartItems: [
     {
       number: 1, artist: 'Nelly', monthly_listeners: 100, id: '5',
     },

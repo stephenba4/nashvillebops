@@ -3,7 +3,7 @@
     <b-navbar id="navbar">
       <router-link to="/">
         <b-navbar-brand>
-          <b-img src="./assets/logo.png" height="60" />
+          <b-img src="./assets/nashvillebops.png" height="60" />
         </b-navbar-brand>
       </router-link>
     </b-navbar>
