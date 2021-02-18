@@ -12,21 +12,23 @@
         responsive
         bordered
         small
+        hover
         stacked="md"
+        class="m-3"
         @row-clicked="redirect"
       >
         <template #table-caption>
-          A curated chart for the hottest pop artists in Nashville
-          <b-form-group
-            class="w-25 m-1"
-            style="float: right;"
-          >
+          <h3 style="display: inline;">
+            The hottest pop artists in Nashville
+          </h3>
+
+          <b-form-group class="w-25" style="float: right;">
             <b-input-group size="sm">
               <b-form-input
                 id="filter-input"
                 v-model="filter"
                 type="search"
-                placeholder="Type to Search"
+                placeholder="Search"
               />
 
               <b-input-group-append>
@@ -38,12 +40,12 @@
           </b-form-group>
         </template>
       </b-table>
+
       <b-pagination
         v-model="currentPage"
         :total-rows="rows"
         :per-page="perPage"
         style="float: right;"
-        class="m-1"
       />
     </b-container>
   </div>
