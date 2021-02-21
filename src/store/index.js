@@ -1,12 +1,12 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-import data from '@/data/data'
+import artistData from '@/data/artistData'
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    data,
+    artistData,
   },
   mutations: {
   },
@@ -15,8 +15,8 @@ export default new Vuex.Store({
   modules: {
   },
   getters: {
-    getData(state) {
-      return state.data;
+    getArtistData(state) {
+      return state.artistData;
     },
   },
 });
