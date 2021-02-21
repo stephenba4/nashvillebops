@@ -2,7 +2,7 @@
   <div>
     <b-container fluid>
       <b-card class="m-1">
-        <h3> {{ artist }} #{{ position }}</h3>
+        <h3> {{ artist }}</h3>
         <iframe
           v-if="artist === 'somegirlnamedanna'"
           src="https://open.spotify.com/embed/artist/3uS3te8WcySMktA5XGyyM3"
@@ -105,8 +105,8 @@ export default {
       default: '',
     },
     position: {
-      type: String,
-      default: '',
+      type: Number,
+      default: null,
     },
   },
 }
