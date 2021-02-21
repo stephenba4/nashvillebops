@@ -16,13 +16,14 @@
             />
 
             <b-input-group-append>
-              <b-button :disabled="!filter" @click="filter = ''">
+              <b-button variant="primary" :disabled="!filter" @click="filter = ''">
                 Clear
               </b-button>
             </b-input-group-append>
           </b-input-group>
         </b-form-group>
 
+        <!-- add this prop to b-table to enable details page: @row-clicked="toArtistDetails" -->
         <b-table
           :fields="fakeData.artistChartFields"
           :items="fakeData.artistChartItems"
@@ -34,10 +35,30 @@
           responsive
           bordered
           small
-          hover
-          stacked="md"
-          @row-clicked="toArtistDetails"
-        />
+        >
+          <template #cell(listen)="row">
+            <b-button
+              variant="success"
+              size="sm"
+              @click="row.toggleDetails"
+            >
+              {{ row.detailsShowing ? 'Hide' : 'Listen' }}
+            </b-button>
+          </template>
+
+          <template #row-details="">
+            <b-card>
+              <iframe
+                src="https://open.spotify.com/embed/artist/3uS3te8WcySMktA5XGyyM3"
+                width="300"
+                height="380"
+                frameborder="0"
+                allowtransparency="true"
+                allow="encrypted-media"
+              />
+            </b-card>
+          </template>
+        </b-table>
 
         <b-pagination
           v-model="currentPage"
@@ -88,7 +109,7 @@ export default {
   },
   methods: {
     toArtistDetails(row) {
-      this.$router.push({ name: 'Artist Details', params: { id: row.id, artist: row.artist, position: row.position } })
+      this.$router.push({ name: 'Artist Details', params: { id: row.id, artist: row.artist } })
     },
   },
 };
