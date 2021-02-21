@@ -81,6 +81,114 @@
       allowtransparency="true"
       allow="encrypted-media"
     />
+    <iframe
+      v-if="artist === 'Kayla Nettles'"
+      src="https://open.spotify.com/embed/artist/3EZakRdUrrmRH77bAmehLg"
+      width="300"
+      height="380"
+      frameborder="0"
+      allowtransparency="true"
+      allow="encrypted-media"
+    />
+    <iframe
+      v-if="artist === 'Lackhoney'"
+      src="https://open.spotify.com/embed/artist/4lPCP0EblrGCOJwEAM9WTh"
+      width="300"
+      height="380"
+      frameborder="0"
+      allowtransparency="true"
+      allow="encrypted-media"
+    />
+    <iframe
+      v-if="artist === 'Brooke'"
+      src="https://open.spotify.com/embed/artist/5jYtPJp5sGTc3amH9E5cdq"
+      width="300"
+      height="380"
+      frameborder="0"
+      allowtransparency="true"
+      allow="encrypted-media"
+    />
+    <iframe
+      v-if="artist === 'Gatsby'"
+      src="https://open.spotify.com/embed/artist/03YSt5Q4dXtwqB4P5m8ca0"
+      width="300"
+      height="380"
+      frameborder="0"
+      allowtransparency="true"
+      allow="encrypted-media"
+    />
+    <iframe
+      v-if="artist === 'Jon Santana'"
+      src="https://open.spotify.com/embed/artist/05XxXeBmy0Kge0WdgDfj05"
+      width="300"
+      height="380"
+      frameborder="0"
+      allowtransparency="true"
+      allow="encrypted-media"
+    />
+    <iframe
+      v-if="artist === 'James Droll'"
+      src="https://open.spotify.com/embed/artist/3lPtB78D5puSWQ7ltAafQw"
+      width="300"
+      height="380"
+      frameborder="0"
+      allowtransparency="true"
+      allow="encrypted-media"
+    />
+    <iframe
+      v-if="artist === 'Notelle'"
+      src="https://open.spotify.com/embed/artist/2QH237xSFhmfZJHrRulT7U"
+      width="300"
+      height="380"
+      frameborder="0"
+      allowtransparency="true"
+      allow="encrypted-media"
+    />
+    <iframe
+      v-if="artist === 'Bryce Green'"
+      src="https://open.spotify.com/embed/artist/0dYp8xHqG4qZX3G7NxSbbc"
+      width="300"
+      height="380"
+      frameborder="0"
+      allowtransparency="true"
+      allow="encrypted-media"
+    />
+    <iframe
+      v-if="artist === 'Sansol the Artist'"
+      src="https://open.spotify.com/embed/artist/5AXMzlQxmVl6FKVqdxzs44"
+      width="300"
+      height="380"
+      frameborder="0"
+      allowtransparency="true"
+      allow="encrypted-media"
+    />
+    <iframe
+      v-if="artist === 'Abigail Rose'"
+      src="https://open.spotify.com/embed/artist/6uXHv7VdgIW1OdLgHy1zCN"
+      width="300"
+      height="380"
+      frameborder="0"
+      allowtransparency="true"
+      allow="encrypted-media"
+    />
+    <iframe
+      v-if="artist === 'Talia Stewart'"
+      src="https://open.spotify.com/embed/artist/7iymtCFEZNcH49Q53HJMFk"
+      width="300"
+      height="380"
+      frameborder="0"
+      allowtransparency="true"
+      allow="encrypted-media"
+    />
+    <iframe
+      v-if="artist === 'MILKK'"
+      src="https://open.spotify.com/embed/artist/4zhJqpHEEaLhYIY0hAFd9h"
+      width="300"
+      height="380"
+      frameborder="0"
+      allowtransparency="true"
+      allow="encrypted-media"
+    />
   </div>
 </template>
 

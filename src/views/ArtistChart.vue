@@ -27,16 +27,16 @@
         </b-form-group>
 
         <b-table
-          :fields="fakeData.artistChartFields"
-          :items="fakeData.artistChartItems"
+          :fields="fields"
+          :items="data"
           :per-page="perPage"
           :current-page="currentPage"
           :filter="filter"
-          caption-top
           striped
           responsive
           bordered
           small
+          sort-by="artist"
         >
           <template #cell(listen)="row">
             <b-button
@@ -65,13 +65,22 @@
 
       <b-card class="m-1">
         <iframe
-          class="m-1"
+          class="pl-2 pr-2"
           src="https://open.spotify.com/embed/playlist/58NEDLN8pRY27qU4zkWuZV"
           width="300"
           height="400"
           frameborder="0"
           allowtransparency="true"
           allow="encrypted-media"
+        />
+        <iframe
+          src="//lightwidget.com/widgets/a195d47648fb579aa192a3f6f892e692.html"
+          scrolling="no"
+          allowtransparency="true"
+          class="lightwidget-widget pl-2 pr-2"
+          style="border:0;overflow:hidden;"
+          width="300"
+          height="400"
         />
       </b-card>
 
@@ -95,16 +104,20 @@ export default {
       perPage: 10,
       currentPage: 1,
       filter: null,
-      fakeData: {},
+      data: [],
       rows: null,
+      fields: [
+        { key: 'artist', sortable: true },
+        { key: 'listen', label: '' },
+      ],
     }
   },
   computed: {
-    ...mapGetters(['getFakeData']),
+    ...mapGetters(['getData']),
   },
   mounted() {
-    this.fakeData = this.getFakeData;
-    this.rows = this.getFakeData.artistChartItems.length
+    this.data = this.getData;
+    this.rows = this.getData.length
   },
 };
 </script>

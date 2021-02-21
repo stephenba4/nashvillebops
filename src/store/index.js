@@ -1,12 +1,12 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-import fakeData from '@/data/fakeData';
+import data from '@/data/data'
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    fakeData,
+    data,
   },
   mutations: {
   },
@@ -15,8 +15,8 @@ export default new Vuex.Store({
   modules: {
   },
   getters: {
-    getFakeData(state) {
-      return state.fakeData;
+    getData(state) {
+      return state.data;
     },
   },
 });
