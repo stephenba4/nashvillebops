@@ -3,10 +3,10 @@
     <b-container fluid>
       <b-card class="m-1">
         <h3>
-          Nashville Bops Roll Call
+          a place to discover the dopest nashville pop artists
         </h3>
         <h3>
-          Artists: {{ rows }}
+          artists: {{ rows }}
         </h3>
 
         <b-form-group>
@@ -28,14 +28,14 @@
 
         <b-table
           :fields="fields"
-          :items="data"
+          :items="artistData"
           :per-page="perPage"
           :current-page="currentPage"
           :filter="filter"
           striped
           responsive
           bordered
-          small
+          extra-large
           sort-by="artist"
         >
           <template #cell(listen)="row">
@@ -53,8 +53,26 @@
               <ArtistSpotify :artist="row.item.artist" />
             </b-card>
           </template>
-        </b-table>
 
+          <template #cell(artist)="data">
+            <b-img
+              v-if="data.value === 'Quinn Lewis'"
+              src="../assets/Quinn Lewis.png"
+              width="100"
+              rounded
+            />
+
+            <b-img
+              v-if="data.value === 'somegirlnamedanna'"
+              src="../assets/somegirlnamedanna.png"
+              width="100"
+              rounded
+            />
+            <div>
+              {{ data.value }}
+            </div>
+          </template>
+        </b-table>
         <b-pagination
           v-model="currentPage"
           :total-rows="rows"
@@ -101,10 +119,10 @@ export default {
   },
   data() {
     return {
-      perPage: 10,
+      perPage: 12,
       currentPage: 1,
       filter: null,
-      data: [],
+      artistData: [],
       rows: null,
       fields: [
         { key: 'artist', sortable: true },
@@ -113,11 +131,16 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(['getData']),
+    ...mapGetters(['getArtistData']),
   },
   mounted() {
-    this.data = this.getData;
-    this.rows = this.getData.length
+    this.artistData = this.getArtistData;
+    this.rows = this.getArtistData.length
+  },
+  methods: {
+    consoleLog(input) {
+      console.log(input);
+    },
   },
 };
 </script>
