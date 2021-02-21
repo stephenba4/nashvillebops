@@ -12,7 +12,7 @@ const routes = [
     component: ArtistChart,
   },
   {
-    path: '/artistDetails/:id',
+    path: '/:id',
     name: 'Artist Details',
     component: ArtistDetails,
     props: true,

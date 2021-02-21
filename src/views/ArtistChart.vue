@@ -36,7 +36,7 @@
           small
           hover
           stacked="md"
-          @row-clicked="toDetails"
+          @row-clicked="toArtistDetails"
         />
 
         <b-pagination
@@ -87,7 +87,7 @@ export default {
     this.rows = this.getFakeData.artistChartItems.length
   },
   methods: {
-    toDetails(row) {
+    toArtistDetails(row) {
       this.$router.push({ name: 'Artist Details', params: { id: row.id, artist: row.artist, position: row.position } })
     },
   },
