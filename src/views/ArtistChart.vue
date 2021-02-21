@@ -3,6 +3,9 @@
     <b-container fluid>
       <b-card class="m-1">
         <h3>
+          Nashville Bops Roll Call
+        </h3>
+        <h3>
           Artists: {{ rows }}
         </h3>
 
@@ -23,7 +26,6 @@
           </b-input-group>
         </b-form-group>
 
-        <!-- add this prop to b-table to enable details page: @row-clicked="toArtistDetails" -->
         <b-table
           :fields="fakeData.artistChartFields"
           :items="fakeData.artistChartItems"
@@ -46,16 +48,9 @@
             </b-button>
           </template>
 
-          <template #row-details="">
+          <template #row-details="row">
             <b-card>
-              <iframe
-                src="https://open.spotify.com/embed/artist/3uS3te8WcySMktA5XGyyM3"
-                width="300"
-                height="380"
-                frameborder="0"
-                allowtransparency="true"
-                allow="encrypted-media"
-              />
+              <ArtistSpotify :artist="row.item.artist" />
             </b-card>
           </template>
         </b-table>
@@ -89,8 +84,12 @@
 
 <script>
 import { mapGetters } from 'vuex';
+import ArtistSpotify from '@/components/ArtistSpotify.vue';
 
 export default {
+  components: {
+    ArtistSpotify,
+  },
   data() {
     return {
       perPage: 10,
@@ -106,11 +105,6 @@ export default {
   mounted() {
     this.fakeData = this.getFakeData;
     this.rows = this.getFakeData.artistChartItems.length
-  },
-  methods: {
-    toArtistDetails(row) {
-      this.$router.push({ name: 'Artist Details', params: { id: row.id, artist: row.artist } })
-    },
   },
 };
 </script>
