@@ -100,6 +100,15 @@
           width="300"
           height="400"
         />
+        <iframe
+          src="https://cdn.lightwidget.com/widgets/a195d47648fb579aa192a3f6f892e692.html"
+          scrolling="no"
+          allowtransparency="true"
+          class="lightwidget-widget pl-2 pr-2"
+          style="border:0;overflow:hidden;"
+          width="300"
+          height="400"
+        />
       </b-card>
 
       <p>
