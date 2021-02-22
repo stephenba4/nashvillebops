@@ -35,8 +35,8 @@
           striped
           responsive
           bordered
-          extra-large
           sort-by="artist"
+          small
         >
           <template #cell(listen)="row">
             <b-button
