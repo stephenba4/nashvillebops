@@ -25,7 +25,7 @@ export default [
   },
   {
     id: 7,
-    artist: 'Drew Scheuler',
+    artist: 'Drew Schueler',
   },
   {
     id: 8,
