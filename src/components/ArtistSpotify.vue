@@ -55,7 +55,7 @@
       allow="encrypted-media"
     />
     <iframe
-      v-if="artist === 'Drew Scheuler'"
+      v-if="artist === 'Drew Schueler'"
       src="https://open.spotify.com/embed/artist/1F2PBVC03y1a9PCszIxJhI"
       width="230"
       height="250"
