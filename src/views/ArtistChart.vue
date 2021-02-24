@@ -113,10 +113,5 @@ export default {
   mounted() {
     this.artistData = this.getArtistData;
   },
-  methods: {
-    consoleLog(input) {
-      console.log(input);
-    },
-  },
 };
 </script>

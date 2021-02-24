@@ -1,11 +1,9 @@
 <template>
   <div id="app">
     <b-navbar id="navbar">
-      <router-link to="/">
-        <b-navbar-brand>
-          <b-img src="./assets/nashvillebops.png" height="60" />
-        </b-navbar-brand>
-      </router-link>
+      <b-navbar-brand>
+        <b-img src="./assets/nashvillebops.png" height="60" />
+      </b-navbar-brand>
     </b-navbar>
     <router-view />
   </div>
