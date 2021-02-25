@@ -7,7 +7,6 @@
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
-    "deploy": "./deploy.sh"
   },
   "dependencies": {
     "bootstrap": "^4.6.0",
