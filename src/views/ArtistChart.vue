@@ -25,7 +25,7 @@
 
         <b-table
           :fields="fields"
-          :items="artistData"
+          :items="getArtistData"
           :filter="filter"
           striped
           responsive
@@ -93,6 +93,7 @@ import ArtistSpotify from '@/components/ArtistSpotify.vue';
 import ArtistImage from '@/components/ArtistImage.vue';
 
 export default {
+  name: 'ArtistChart',
   components: {
     ArtistSpotify,
     ArtistImage,
@@ -100,7 +101,6 @@ export default {
   data() {
     return {
       filter: null,
-      artistData: [],
       fields: [
         { key: 'artist', sortable: true },
         { key: 'listen', label: '' },
@@ -109,9 +109,6 @@ export default {
   },
   computed: {
     ...mapGetters(['getArtistData']),
-  },
-  mounted() {
-    this.artistData = this.getArtistData;
   },
 };
 </script>

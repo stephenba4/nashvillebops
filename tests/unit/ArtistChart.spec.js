@@ -1,12 +1,16 @@
-import { shallowMount } from '@vue/test-utils';
+import { shallowMount, createLocalVue } from '@vue/test-utils';
+import { BootstrapVue } from 'bootstrap-vue';
+import store from '@/store';
 import ArtistChart from '@/views/ArtistChart.vue';
 
-describe('ArtistChart.vue', () => {
-  it('renders props.msg when passed', () => {
-    const msg = 'new message';
-    const wrapper = shallowMount(ArtistChart, {
-      propsData: { msg },
-    });
-    expect(wrapper.text()).toMatch(msg);
+const localVue = createLocalVue()
+
+localVue.use(BootstrapVue)
+
+describe('ArtistChart', () => {
+  it('renders', () => {
+    const wrapper = shallowMount(ArtistChart, { store, localVue });
+    const artistChart = wrapper.findComponent({ name: 'ArtistChart' })
+    expect(artistChart.exists()).toBe(true);
   });
 });
