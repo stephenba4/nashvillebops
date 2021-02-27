@@ -3,7 +3,7 @@
     <b-container fluid>
       <b-card class="m-1">
         <h3>
-          Nashville pop artists
+          Nashville Pop Artist Roster
         </h3>
 
         <b-form-group>
