@@ -8,7 +8,7 @@
         </h1>
 
         <h6 class="m-3">
-          A list of active pop artists from Nashville who have been featured on Nashville
+          A list of active pop artists from Nashville in order of Spotify Followers. Each has been featured on Nashville
           Bops Next Up playlist or Nashville Bops Instagram.
         </h6>
 
@@ -35,12 +35,35 @@
           striped
           responsive
           bordered
-          sort-by="artist"
+          :sort-by.sync="sortBy"
+          :sort-desc="sortDesc"
           hover
           sticky-header="700px"
           @row-clicked="toArtistProfile"
         >
-          >
+          <template #cell(position)="row">
+            <h3 class="mt-2">
+              {{ row.item.position }}
+            </h3>
+          </template>
+
+          <template #cell(artist)="data">
+            <div style="text-align: left;">
+              <b-img
+                :src="data.item.img"
+                width="60"
+                rounded
+              />
+              {{ data.item.artist }}
+            </div>
+          </template>
+
+          <template #cell(spotifyFollowers)="data">
+            <h3 class="m-2">
+              {{ data.item.spotifyFollowers }}
+            </h3>
+          </template>
+
           <template #cell(listen)="row">
             <b-button
               variant="success"
@@ -64,17 +87,6 @@
                 />
               </div>
             </b-card>
-          </template>
-
-          <template #cell(artist)="data">
-            <div style="text-align: left;">
-              <b-img
-                :src="data.item.img"
-                width="60"
-                rounded
-              />
-              {{ data.item.artist }}
-            </div>
           </template>
         </b-table>
       </b-card>
@@ -130,9 +142,13 @@ export default {
     return {
       filter: null,
       fields: [
+        { key: 'position', sortable: true },
         { key: 'artist', sortable: true },
+        { key: 'spotifyFollowers', sortable: true },
         { key: 'listen', label: '' },
       ],
+      sortBy: 'spotifyFollowers',
+      sortDesc: true,
     }
   },
   computed: {
