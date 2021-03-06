@@ -1,25 +1,30 @@
 <template>
-  <div>
-    <b-container fluid>
-      <b-card class="m-1">
-        <h3>
-          Nashville Pop Artist Roster
-        </h3>
+  <div class="justify-content-center pt-4 pb-4">
+    <b-container fluid style="max-width: 700px;">
+      <b-card>
+        <h1 class="m-3">
+          <b-img src="./../assets/nashvillebops.png" height="100" />
+          Nashville Bops Roster
+        </h1>
+
+        <h6 class="m-3">
+          A list of active pop artists from Nashville who have been featured on Nashville
+          Bops Next Up playlist or Nashville Bops Instagram.
+        </h6>
+
+        <h6 class="m-3">
+          Total # of Artists: {{ getArtistData.length }}
+        </h6>
 
         <b-form-group>
-          <b-input-group size="sm">
+          <b-input-group size="sm" class="justify-content-center">
             <b-form-input
               id="filter-input"
               v-model="filter"
               type="search"
               placeholder="Search"
+              style="max-width: 300px;"
             />
-
-            <b-input-group-append>
-              <b-button variant="primary" :disabled="!filter" @click="filter = ''">
-                Clear
-              </b-button>
-            </b-input-group-append>
           </b-input-group>
         </b-form-group>
 
@@ -31,8 +36,9 @@
           responsive
           bordered
           sort-by="artist"
-          large
+          hover
           sticky-header="700px"
+          @row-clicked="toArtistProfile"
         >
           >
           <template #cell(listen)="row">
@@ -47,57 +53,79 @@
 
           <template #row-details="row">
             <b-card style="background-color: #FDA0D8;">
-              <ArtistSpotify :artist="row.item.artist" />
+              <div>
+                <iframe
+                  :src="row.item.spotifyPlayer"
+                  width="100%"
+                  height="250"
+                  frameborder="0"
+                  allowtransparency="true"
+                  allow="encrypted-media"
+                />
+              </div>
             </b-card>
           </template>
 
           <template #cell(artist)="data">
             <div style="text-align: left;">
-              <ArtistImage :artist="data.item.artist" />
+              <b-img
+                :src="data.item.img"
+                width="60"
+                rounded
+              />
+              {{ data.item.artist }}
             </div>
           </template>
         </b-table>
       </b-card>
 
-      <b-card class="m-1">
-        <iframe
-          class="pl-2 pr-2"
-          src="https://open.spotify.com/embed/playlist/58NEDLN8pRY27qU4zkWuZV"
-          width="250"
-          height="400"
-          frameborder="0"
-          allowtransparency="true"
-          allow="encrypted-media"
-        />
-        <iframe
-          src="https://cdn.lightwidget.com/widgets/a195d47648fb579aa192a3f6f892e692.html"
-          scrolling="no"
-          allowtransparency="true"
-          class="lightwidget-widget pl-2 pr-2"
-          style="border:0;overflow:hidden;"
-          width="250"
-          height="400"
-        />
-      </b-card>
+      <b-row>
+        <b-col>
+          <b-card class="mt-4">
+            <h5>Spotify Playlist:</h5>
+            <h5>Nashville Bops Next Up</h5>
+            <iframe
+              src="https://open.spotify.com/embed/playlist/58NEDLN8pRY27qU4zkWuZV"
+              width="250"
+              height="400"
+              frameborder="1"
+              allowtransparency="true"
+              allow="encrypted-media"
+            />
+          </b-card>
+        </b-col>
 
-      <p>
-        email: stephen@nashvillebops.com
-      </p>
+        <b-col>
+          <b-card class="mt-4">
+            <h5>Instagram:</h5>
+            <h5>@nashvillebops</h5>
+            <iframe
+              src="https://cdn.lightwidget.com/widgets/a195d47648fb579aa192a3f6f892e692.html"
+              width="250"
+              height="400"
+              scrolling="yes"
+              allowtransparency="true"
+              class="lightwidget-widget"
+              style="border:0;overflow:hidden;"
+            />
+          </b-card>
+        </b-col>
+      </b-row>
+
+      <b-card class="mt-4">
+        <p class="m-2">
+          For song submissions and other inquiries email: stephen@nashvillebops.com
+        </p>
+      </b-card>
     </b-container>
   </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex';
-import ArtistSpotify from '@/components/ArtistSpotify.vue';
-import ArtistImage from '@/components/ArtistImage.vue';
 
 export default {
   name: 'ArtistChart',
-  components: {
-    ArtistSpotify,
-    ArtistImage,
-  },
   data() {
     return {
       filter: null,
@@ -109,6 +137,11 @@ export default {
   },
   computed: {
     ...mapGetters(['getArtistData']),
+  },
+  methods: {
+    toArtistProfile(row) {
+      this.$router.push({ name: 'Artist Profile', params: { row } });
+    },
   },
 };
 </script>

@@ -1,9 +1,11 @@
 <template>
   <div id="app">
     <b-navbar id="navbar">
-      <b-navbar-brand>
-        <b-img src="./assets/nashvillebops.png" height="60" />
-      </b-navbar-brand>
+      <router-link :to="{name: 'Artist Chart'}">
+        <b-navbar-brand>
+          <b-img src="./assets/nashvillebops.png" height="60" />
+        </b-navbar-brand>
+      </router-link>
     </b-navbar>
     <router-view />
   </div>
@@ -19,7 +21,6 @@
   background-color: #FDA0D8;
 }
 #navbar {
-  background-color: #FDA0D8;
+  background-color: #fc69c1;
 }
-
 </style>
