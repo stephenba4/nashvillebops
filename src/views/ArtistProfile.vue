@@ -33,7 +33,7 @@
           <h5>
             Spotify Followers:
           </h5>
-          {{ row.followers }}
+          {{ row.spotifyFollowers }}
         </b-card>
       </b-card>
     </b-container>
