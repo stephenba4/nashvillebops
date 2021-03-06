@@ -35,6 +35,17 @@
           </h5>
           {{ row.spotifyFollowers }}
         </b-card>
+
+        <b-card class="m-3">
+          <iframe
+            :src="row.spotifyPlayer"
+            width="100%"
+            height="250"
+            frameborder="0"
+            allowtransparency="true"
+            allow="encrypted-media"
+          />
+        </b-card>
       </b-card>
     </b-container>
   </div>

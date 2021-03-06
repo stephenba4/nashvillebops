@@ -8,7 +8,9 @@
         </h1>
 
         <h6 class="m-3">
-          A list of active pop artists from Nashville in order of Spotify Followers. Each has been featured on Nashville
+          A list (and profiles) of active pop
+          artists from Nashville in order of Spotify Followers.
+          Each has been featured on Nashville
           Bops Next Up playlist or Nashville Bops Instagram.
         </h6>
 
@@ -35,6 +37,7 @@
           striped
           responsive
           bordered
+          small
           :sort-by.sync="sortBy"
           :sort-desc="sortDesc"
           hover
@@ -42,51 +45,28 @@
           @row-clicked="toArtistProfile"
         >
           <template #cell(position)="row">
-            <h3 class="mt-2">
+            <h2 class="mt-3">
               {{ row.item.position }}
-            </h3>
+            </h2>
           </template>
 
           <template #cell(artist)="data">
-            <div style="text-align: left;">
+            <div>
               <b-img
                 :src="data.item.img"
                 width="60"
                 rounded
               />
+            </div>
+            <div style="font-size: small">
               {{ data.item.artist }}
             </div>
           </template>
 
           <template #cell(spotifyFollowers)="data">
-            <h3 class="m-2">
-              {{ data.item.spotifyFollowers }}
-            </h3>
-          </template>
-
-          <template #cell(listen)="row">
-            <b-button
-              variant="success"
-              size="sm"
-              @click="row.toggleDetails"
-            >
-              {{ row.detailsShowing ? 'Hide' : 'Listen' }}
-            </b-button>
-          </template>
-
-          <template #row-details="row">
-            <b-card style="background-color: #FDA0D8;">
-              <div>
-                <iframe
-                  :src="row.item.spotifyPlayer"
-                  width="100%"
-                  height="250"
-                  frameborder="0"
-                  allowtransparency="true"
-                  allow="encrypted-media"
-                />
-              </div>
-            </b-card>
+            <h6 class="mt-4">
+              {{ formatNumber(data.item.spotifyFollowers) }}
+            </h6>
           </template>
         </b-table>
       </b-card>
@@ -112,7 +92,7 @@
             <h5>Instagram:</h5>
             <h5>@nashvillebops</h5>
             <iframe
-              src="https://cdn.lightwidget.com/widgets/a195d47648fb579aa192a3f6f892e692.html"
+              src="https://cdn.lightwidget.com/widgets/8c110fa7bda054799ea94d57093d0740.html"
               width="250"
               height="400"
               scrolling="yes"
@@ -142,10 +122,9 @@ export default {
     return {
       filter: null,
       fields: [
-        { key: 'position', sortable: true },
+        { key: 'position', label: '', sortable: true },
         { key: 'artist', sortable: true },
         { key: 'spotifyFollowers', sortable: true },
-        { key: 'listen', label: '' },
       ],
       sortBy: 'spotifyFollowers',
       sortDesc: true,
@@ -157,6 +136,9 @@ export default {
   methods: {
     toArtistProfile(row) {
       this.$router.push({ name: 'Artist Profile', params: { row } });
+    },
+    formatNumber(num) {
+      return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
     },
   },
 };
