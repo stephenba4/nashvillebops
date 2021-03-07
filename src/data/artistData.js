@@ -6,7 +6,7 @@ export default [
     instagram: 'https://www.instagram.com/somegirlnamedanna/',
     spotify: 'https://open.spotify.com/artist/3uS3te8WcySMktA5XGyyM3?si=2D348rGdSbmt3rYNs3vB0w',
     spotifyFollowers: 4825,
-    spotifyPlayer: 'https://open.spotify.com/embed/artist/3uS3te8WcySMktA5XGyyM3s',
+    spotifyPlayer: 'https://open.spotify.com/embed/artist/3uS3te8WcySMktA5XGyyM3',
     position: 5,
   },
   {
