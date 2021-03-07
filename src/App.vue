@@ -7,7 +7,14 @@
         </b-navbar-brand>
       </router-link>
     </b-navbar>
+
     <router-view />
+
+    <footer id="footer" class="p-3">
+      <p class="mt-2">
+        For song submissions and other inquiries email: stephen@nashvillebops.com
+      </p>
+    </footer>
   </div>
 </template>
 
@@ -22,5 +29,10 @@
 }
 #navbar {
   background-color: #fc69c1;
+  text-align: center;
+}
+#footer {
+  background-color: #fc69c1;
+  text-align: center;
 }
 </style>

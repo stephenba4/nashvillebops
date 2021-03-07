@@ -2,7 +2,7 @@
   <div class="justify-content-center pt-4 pb-4">
     <b-container fluid style="max-width: 700px;">
       <b-card>
-        <h1 class="m-3">
+        <h1 class="ml-3 mr-3">
           <b-img src="./../assets/nashvillebops.png" height="100" />
           Nashville Bops Roster
         </h1>
@@ -14,9 +14,9 @@
           Bops Next Up playlist or Nashville Bops Instagram.
         </h6>
 
-        <h6 class="m-3">
+        <h5 class="m-3">
           Total # of Artists: {{ getArtistData.length }}
-        </h6>
+        </h5>
 
         <b-form-group>
           <b-input-group size="sm" class="justify-content-center">
@@ -41,7 +41,7 @@
           :sort-by.sync="sortBy"
           :sort-desc="sortDesc"
           hover
-          sticky-header="700px"
+          sticky-header="1000px"
           @row-clicked="toArtistProfile"
         >
           <template #cell(position)="row">
@@ -64,9 +64,9 @@
           </template>
 
           <template #cell(spotifyFollowers)="data">
-            <h6 class="mt-4">
+            <h4 class="mt-4">
               {{ formatNumber(data.item.spotifyFollowers) }}
-            </h6>
+            </h4>
           </template>
         </b-table>
       </b-card>
@@ -103,12 +103,6 @@
           </b-card>
         </b-col>
       </b-row>
-
-      <b-card class="mt-4">
-        <p class="m-2">
-          For song submissions and other inquiries email: stephen@nashvillebops.com
-        </p>
-      </b-card>
     </b-container>
   </div>
 </template>
