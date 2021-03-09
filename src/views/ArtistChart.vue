@@ -141,7 +141,7 @@ export default {
     getName() {
       NameService.get()
         .then((response) => {
-          console.log(`hi ${response}`);
+          console.log({ response });
         })
         .catch((e) => {
           console.log(e);
