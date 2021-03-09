@@ -1,6 +1,9 @@
 <template>
   <div class="justify-content-center pt-4 pb-4">
     <b-container fluid style="max-width: 700px;">
+      <b-button @click="getName()">
+        Get Name
+      </b-button>
       <b-card>
         <h1 class="ml-3 mr-3">
           <b-img src="./../assets/nashvillebops.png" height="100" />
@@ -109,6 +112,7 @@
 
 <script>
 import { mapGetters } from 'vuex';
+import NameService from '../services/NameService';
 
 export default {
   name: 'ArtistChart',
@@ -134,6 +138,16 @@ export default {
     formatNumber(num) {
       return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
     },
+    getName() {
+      NameService.get()
+        .then((response) => {
+          console.log(`hi ${response}`);
+        })
+        .catch((e) => {
+          console.log(e);
+        });
+    },
+
   },
 };
 </script>
