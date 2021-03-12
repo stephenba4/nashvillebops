@@ -17,13 +17,13 @@
           </h5>
 
           <div>
-            <b-link :href="row.spotify" target="_blank">
+            <b-link :href="artistData.spotify" target="_blank">
               Spotify Account
             </b-link>
           </div>
 
           <div>
-            <b-link :href="row.instagram" target="_blank">
+            <b-link :href="artistData.instagram" target="_blank">
               Instagram Account
             </b-link>
           </div>
@@ -38,7 +38,7 @@
 
         <b-card class="m-3">
           <iframe
-            :src="row.spotifyPlayer"
+            :src="artistData.spotifyPlayer"
             width="100%"
             height="250"
             frameborder="0"
@@ -52,6 +52,8 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
+
 export default {
   props: {
     row: {
@@ -60,6 +62,17 @@ export default {
         return {}
       },
     },
+  },
+  data() {
+    return {
+      artistData: {},
+    }
+  },
+  computed: {
+    ...mapGetters(['getSingleArtistData']),
+  },
+  mounted() {
+    this.artistData = this.getSingleArtistData(this.row.id)
   },
 }
 </script>

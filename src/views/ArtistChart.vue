@@ -1,9 +1,6 @@
 <template>
   <div class="justify-content-center pt-4 pb-4">
     <b-container fluid style="max-width: 700px;">
-      <b-button @click="getName()">
-        Get Name
-      </b-button>
       <b-card>
         <h1 class="ml-3 mr-3">
           <b-img src="./../assets/nashvillebops.png" height="100" />
@@ -35,7 +32,7 @@
 
         <b-table
           :fields="fields"
-          :items="getArtistData"
+          :items="spotifyData"
           :filter="filter"
           striped
           responsive
@@ -49,7 +46,7 @@
         >
           <template #cell(position)="row">
             <h2 class="mt-3">
-              {{ row.item.position }}
+              {{ row.index + 1 }}
             </h2>
           </template>
 
@@ -120,16 +117,26 @@ export default {
     return {
       filter: null,
       fields: [
-        { key: 'position', label: '', sortable: true },
-        { key: 'artist', sortable: true },
-        { key: 'spotifyFollowers', sortable: true },
+        { key: 'position', label: '' },
+        { key: 'artist' },
+        { key: 'spotifyFollowers' },
       ],
       sortBy: 'spotifyFollowers',
       sortDesc: true,
+      spotifyData: [],
     }
   },
   computed: {
     ...mapGetters(['getArtistData']),
+  },
+  created() {
+    NameService.get()
+      .then((response) => {
+        this.spotifyData = response.data
+      })
+      .catch((e) => {
+        console.log(e);
+      });
   },
   methods: {
     toArtistProfile(row) {
@@ -138,16 +145,6 @@ export default {
     formatNumber(num) {
       return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
     },
-    getName() {
-      NameService.get()
-        .then((response) => {
-          console.log({ response });
-        })
-        .catch((e) => {
-          console.log(e);
-        });
-    },
-
   },
 };
 </script>
