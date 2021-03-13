@@ -17,7 +17,7 @@
           </h5>
 
           <div>
-            <b-link :href="artistData.spotify" target="_blank">
+            <b-link :href="row.spotify" target="_blank">
               Spotify Account
             </b-link>
           </div>
@@ -38,7 +38,7 @@
 
         <b-card class="m-3">
           <iframe
-            :src="artistData.spotifyPlayer"
+            :src="spotifyPlayer"
             width="100%"
             height="250"
             frameborder="0"
@@ -66,6 +66,7 @@ export default {
   data() {
     return {
       artistData: {},
+      spotifyPlayer: '',
     }
   },
   computed: {
@@ -73,6 +74,7 @@ export default {
   },
   mounted() {
     this.artistData = this.getSingleArtistData(this.row.id)
+    this.spotifyPlayer = `https://open.spotify.com/embed/artist/${this.row.id}`
   },
 }
 </script>
