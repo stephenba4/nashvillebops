@@ -250,9 +250,7 @@ const artistArr = [
   { id: '5SAYvojx5xHsRISXBOZz0A', instagram: 'https://www.instagram.com/jacktheunderdog/' },
   { id: '4lET4bWdSD116tQndRZ96X', instagram: 'https://www.instagram.com/fallenoceans_/' },
   { id: '0f1BcubFYDkGOTA0bJ0u1w', instagram: 'https://www.instagram.com/emilyrowed/' },
+  { id: '0f1BcubFYDkGOTA0bJ0u1w', instagram: 'https://www.instagram.com/emilyrowed/' },
 ]
 
-const artistSet = new Set(artistArr);
-const artistData = [...artistSet];
-
-export default artistData
+export default artistArr
