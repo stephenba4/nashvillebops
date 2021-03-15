@@ -1,8 +1,9 @@
 import axios from 'axios';
 
 export default axios.create({
-  baseURL: 'https://nashvillebopsservice-hsft7.ondigitalocean.app/',
-  // baseURL: 'http://localhost:3000',
+  baseURL: (process.env.NODE_ENV === 'production')
+    ? 'https://nashvillebopsservice-hsft7.ondigitalocean.app/'
+    : 'http://localhost:3000',
   headers: {
     'Content-type': 'application/json',
   },

@@ -44,9 +44,9 @@
           sticky-header="1000px"
           @row-clicked="toArtistProfile"
         >
-          <template #cell(position)="row">
+          <template #cell(position)="data">
             <h2 class="mt-3">
-              {{ row.index + 1 }}
+              {{ data.item.position }}
             </h2>
           </template>
 
