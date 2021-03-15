@@ -108,7 +108,7 @@
             <iframe
               src="https://open.spotify.com/embed/playlist/58NEDLN8pRY27qU4zkWuZV"
               width="250"
-              height="500"
+              height="400"
               frameborder="0"
               allowtransparency="true"
               allow="encrypted-media"

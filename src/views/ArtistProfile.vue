@@ -42,7 +42,7 @@
           <iframe
             :src="spotifyPlayer"
             width="100%"
-            height="250"
+            height="350"
             frameborder="0"
             allowtransparency="true"
             allow="encrypted-media"
