@@ -2,11 +2,32 @@
   <div class="justify-content-center pt-4 pb-4">
     <b-container fluid style="max-width: 700px;">
       <b-card>
-        <h1 class="ml-3 mr-3">
-          <b-img src="./../assets/nashvillebops.png" height="100" />
-          Nashville Bops Roster
-        </h1>
+        <b-img src="./../assets/nashvillebops.png" height="100" />
 
+        <h2>Bop Of The Day</h2>
+
+        <iframe
+          src="https://cdn.lightwidget.com/widgets/5863079d5e015aeba699277b8929c0e9.html"
+          width="250"
+          height="250"
+          scrolling="yes"
+          allowtransparency="true"
+          class="lightwidget-widget"
+          style="border:0;overflow:hidden;"
+        />
+
+        <h5 class="m-3">
+          Instagram:
+          <b-link href="https://www.instagram.com/nashvillebops/" target="_blank">
+            @nashvillebops
+          </b-link>
+        </h5>
+      </b-card>
+
+      <b-card class="mt-4">
+        <h2 class="ml-3 mr-3">
+          Nashville Bops Roster
+        </h2>
         <h6 class="m-3">
           Rising Nashville pop artists that have been featured on
           <b-link href="https://www.instagram.com/nashvillebops/" target="_blank">
@@ -78,7 +99,7 @@
       <b-row>
         <b-col>
           <b-card class="mt-4">
-            <h5>Spotify Playlist:</h5>
+            <h2>Spotify Playlist:</h2>
 
             <b-link href="https://open.spotify.com/playlist/58NEDLN8pRY27qU4zkWuZV" target="_blank">
               <h5>Nashville Bops Next Up</h5>
@@ -91,29 +112,6 @@
               frameborder="0"
               allowtransparency="true"
               allow="encrypted-media"
-            />
-          </b-card>
-        </b-col>
-
-        <b-col>
-          <b-card class="mt-4">
-            <h5>
-              IG:
-              <b-link href="https://www.instagram.com/nashvillebops/" target="_blank">
-                @nashvillebops
-              </b-link>
-            </h5>
-
-            <h5>Bop Of The Day</h5>
-
-            <iframe
-              src="https://cdn.lightwidget.com/widgets/5863079d5e015aeba699277b8929c0e9.html"
-              width="250"
-              height="250"
-              scrolling="yes"
-              allowtransparency="true"
-              class="lightwidget-widget"
-              style="border:0;overflow:hidden;"
             />
           </b-card>
         </b-col>
