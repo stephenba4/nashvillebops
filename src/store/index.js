@@ -18,7 +18,6 @@ export default new Vuex.Store({
     getArtistData(state) {
       return state.artistData;
     },
-    getTodoById: (state) => (id) => state.todos.find((todo) => todo.id === id),
     getSingleArtistData: (state) => (artistId) => state.artistData.find((artist) => artist.id === artistId),
   },
 });

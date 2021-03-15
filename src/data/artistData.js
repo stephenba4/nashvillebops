@@ -1,3 +1,5 @@
+import _ from 'lodash';
+
 const artistArr = [
   { id: '3uS3te8WcySMktA5XGyyM3', instagram: 'https://www.instagram.com/somegirlnamedanna/' },
   { id: '5n69lhq7BLWqnSjJgNPRh4', instagram: 'https://www.instagram.com/quinnlewis/' },
@@ -254,4 +256,6 @@ const artistArr = [
   { id: '2yNrYw8mzyKP9Ph4ZpFM8X', instagram: 'https://www.instagram.com/gmusicc/' },
 ]
 
-export default artistArr
+const distinctArtists = _.uniqBy(artistArr, 'id')
+
+export default distinctArtists

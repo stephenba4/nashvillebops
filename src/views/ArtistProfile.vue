@@ -16,24 +16,26 @@
             Social Links:
           </h5>
 
-          <div>
+          <h6 class="mb-2">
             <b-link :href="row.spotify" target="_blank">
               Spotify Account
             </b-link>
-          </div>
+          </h6>
 
-          <div>
+          <h6>
             <b-link :href="artistData.instagram" target="_blank">
               Instagram Account
             </b-link>
-          </div>
+          </h6>
         </b-card>
 
         <b-card class="m-3">
           <h5>
             Spotify Followers:
           </h5>
-          {{ row.spotifyFollowers }}
+          <h6>
+            {{ formatNumber(row.spotifyFollowers) }}
+          </h6>
         </b-card>
 
         <b-card class="m-3">
@@ -75,6 +77,11 @@ export default {
   mounted() {
     this.artistData = this.getSingleArtistData(this.row.id)
     this.spotifyPlayer = `https://open.spotify.com/embed/artist/${this.row.id}`
+  },
+  methods: {
+    formatNumber(num) {
+      return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
+    },
   },
 }
 </script>
