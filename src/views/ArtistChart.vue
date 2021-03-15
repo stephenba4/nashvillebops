@@ -8,14 +8,18 @@
         </h1>
 
         <h6 class="m-3">
-          A list (and profiles) of active pop
-          artists from Nashville in order of Spotify Followers.
-          Each has been featured on Nashville
-          Bops Next Up playlist or Nashville Bops Instagram.
+          Rising Nashville pop artists that have been featured on
+          <b-link href="https://www.instagram.com/nashvillebops/" target="_blank">
+            Nashville Bops Instagram
+          </b-link>
+          or
+          <b-link href="https://open.spotify.com/playlist/58NEDLN8pRY27qU4zkWuZV" target="_blank">
+            Nashville Bops Next Up Spotify Playlist
+          </b-link>
         </h6>
 
         <h5 class="m-3">
-          Total # of Artists: {{ getArtistData.length }}
+          Total # of Artists: {{ spotifyData.length }}
         </h5>
 
         <b-form-group>
@@ -75,12 +79,16 @@
         <b-col>
           <b-card class="mt-4">
             <h5>Spotify Playlist:</h5>
-            <h5>Nashville Bops Next Up</h5>
+
+            <b-link href="https://open.spotify.com/playlist/58NEDLN8pRY27qU4zkWuZV" target="_blank">
+              <h5>Nashville Bops Next Up</h5>
+            </b-link>
+
             <iframe
               src="https://open.spotify.com/embed/playlist/58NEDLN8pRY27qU4zkWuZV"
               width="250"
-              height="400"
-              frameborder="1"
+              height="250"
+              frameborder="0"
               allowtransparency="true"
               allow="encrypted-media"
             />
@@ -89,12 +97,19 @@
 
         <b-col>
           <b-card class="mt-4">
-            <h5>Instagram:</h5>
-            <h5>@nashvillebops</h5>
+            <h5>
+              IG:
+              <b-link href="https://www.instagram.com/nashvillebops/" target="_blank">
+                @nashvillebops
+              </b-link>
+            </h5>
+
+            <h5>Bop Of The Day</h5>
+
             <iframe
-              src="https://cdn.lightwidget.com/widgets/8c110fa7bda054799ea94d57093d0740.html"
+              src="https://cdn.lightwidget.com/widgets/5863079d5e015aeba699277b8929c0e9.html"
               width="250"
-              height="400"
+              height="250"
               scrolling="yes"
               allowtransparency="true"
               class="lightwidget-widget"
