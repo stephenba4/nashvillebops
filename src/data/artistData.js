@@ -251,6 +251,7 @@ const artistArr = [
   { id: '4lET4bWdSD116tQndRZ96X', instagram: 'https://www.instagram.com/fallenoceans_/' },
   { id: '0f1BcubFYDkGOTA0bJ0u1w', instagram: 'https://www.instagram.com/emilyrowed/' },
   { id: '0f1BcubFYDkGOTA0bJ0u1w', instagram: 'https://www.instagram.com/emilyrowed/' },
+  { id: '2yNrYw8mzyKP9Ph4ZpFM8X', instagram: 'https://www.instagram.com/gmusicc/' },
 ]
 
 export default artistArr
