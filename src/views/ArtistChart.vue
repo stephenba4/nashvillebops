@@ -67,8 +67,16 @@
           :sort-desc="sortDesc"
           hover
           sticky-header="1000px"
+          :busy="isBusy"
           @row-clicked="toArtistProfile"
         >
+          <template #table-busy>
+            <div class="text-center text-danger my-2">
+              <b-spinner class="align-middle" />
+              <strong class="m-3">Loading...</strong>
+            </div>
+          </template>
+
           <template #cell(position)="data">
             <h2 class="mt-3">
               {{ data.item.position }}
@@ -137,6 +145,7 @@ export default {
       sortBy: 'spotifyFollowers',
       sortDesc: true,
       spotifyData: [],
+      isBusy: true,
     }
   },
   computed: {
@@ -146,6 +155,7 @@ export default {
     NameService.get()
       .then((response) => {
         this.spotifyData = response.data
+        this.isBusy = false
       })
       .catch((e) => {
         console.log(e);
