@@ -11,21 +11,16 @@
     <router-view />
 
     <footer id="footer" class="p-3">
-      <p class="mt-2">
+      <h3 class="mt-2">
         For song submissions and other inquiries email stephen@nashvillebops.com
-      </p>
+      </h3>
     </footer>
   </div>
 </template>
 
 <style>
-@font-face {
-  font-family: "Nunito";
-  src: local("Nunito"),
-    url(./fonts/Nunito-SemiBold.ttf) format("truetype");
-}
 #app {
-  font-family: 'Nunito', Helvetica, Arial, sans-serif;
+  font-family: 'Reenie Beanie', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

@@ -4,7 +4,7 @@
       <b-card>
         <b-img src="./../assets/nashvillebops.png" height="80" />
 
-        <h2>B🍩p Of The Day</h2>
+        <h1>B🍩p Of The Day</h1>
 
         <iframe
           src="https://cdn.lightwidget.com/widgets/5863079d5e015aeba699277b8929c0e9.html"
@@ -16,21 +16,21 @@
           style="border:0;overflow:hidden;"
         />
 
-        <h5 class="m-3">
+        <h3 class="m-3">
           <b-icon icon="instagram" />
           <b-link class="link" href="https://www.instagram.com/nashvillebops/" target="_blank">
             @nashvillebops
           </b-link>
-        </h5>
+        </h3>
       </b-card>
 
       <b-card class="mt-4">
-        <h2 class="ml-2 mr-2">
+        <h1 class="ml-2 mr-2">
           Nashville B🍩ps 💯
-        </h2>
-        <h5 class="m-2">
+        </h1>
+        <h3 class="m-2">
           100 of the hottest pop artists from Nashville 🔥
-        </h5>
+        </h3>
 
         <b-form-group>
           <b-input-group size="sm" class="justify-content-center">
@@ -67,9 +67,9 @@
           </template>
 
           <template #cell(position)="data">
-            <h2 class="mt-3">
+            <h1 class="mt-3">
               {{ data.item.position }}
-            </h2>
+            </h1>
           </template>
 
           <template #cell(artist)="data">
@@ -81,18 +81,28 @@
               />
             </div>
             <div style="font-size: small">
-              {{ data.item.artist }}
+              <h4>
+                {{ data.item.artist }}
+              </h4>
             </div>
           </template>
 
-          <template #cell(spotifyFollowers)="data">
-            <h4 class="mt-4">
-              {{ formatNumber(data.item.spotifyFollowers) }}
+          <template #head(artist)="">
+            <h4>
+              Artist
             </h4>
           </template>
 
+          <template #cell(spotifyFollowers)="data">
+            <h3 class="mt-4">
+              {{ formatNumber(data.item.spotifyFollowers) }}
+            </h3>
+          </template>
+
           <template #head(spotifyFollowers)="">
-            <i class="fa fa-spotify mr-2" />Followers:
+            <h4>
+              <i class="fa fa-spotify mr-2" />Followers
+            </h4>
           </template>
         </b-table>
       </b-card>
@@ -100,17 +110,17 @@
       <b-row>
         <b-col>
           <b-card class="mt-4">
-            <h2>
+            <h1>
               <i class="fa fa-spotify m-2" />
               Playlist
-            </h2>
+            </h1>
 
             <b-link
               href="https://open.spotify.com/playlist/58NEDLN8pRY27qU4zkWuZV"
               target="_blank"
               class="link"
             >
-              <h5>Nashville B🍩ps Next Up</h5>
+              <h3>Nashville B🍩ps Next Up</h3>
             </b-link>
 
             <iframe
