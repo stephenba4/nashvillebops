@@ -29,7 +29,7 @@
           NASHVILLE BOPS 100
         </h1>
         <h3 class="m-2">
-          Nashville's 100 Hottest Pop Artists
+          Nashville's Hottest Pop Artists
         </h3>
 
         <b-form-group>
