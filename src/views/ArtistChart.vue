@@ -26,7 +26,7 @@
 
       <b-card class="mt-4">
         <h1 class="ml-3 mr-3">
-          Nashville B🍩ps 💯
+          Nashville<br>B🍩ps 💯
         </h1>
         <h5 class="m-3">
           100 of the hottest pop artists from Nashville 🔥
