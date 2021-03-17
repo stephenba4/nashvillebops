@@ -4,7 +4,7 @@
       <b-card>
         <b-img src="./../assets/nashvillebops.png" height="80" />
 
-        <h1>B🍩p Of The Day</h1>
+        <h1>BOP OF THE DAY</h1>
 
         <iframe
           src="https://cdn.lightwidget.com/widgets/5863079d5e015aeba699277b8929c0e9.html"
@@ -26,10 +26,10 @@
 
       <b-card class="mt-4">
         <h1 class="ml-2 mr-2">
-          Nashville B🍩ps 💯
+          NASHVILLE BOPS 100
         </h1>
         <h3 class="m-2">
-          100 of the hottest pop artists from Nashville 🔥
+          Nashville's 100 Hottest Pop Artists
         </h3>
 
         <b-form-group>
@@ -112,7 +112,7 @@
           <b-card class="mt-4">
             <h1>
               <i class="fa fa-spotify m-2" />
-              Playlist
+              PLAYLIST
             </h1>
 
             <b-link
@@ -120,7 +120,7 @@
               target="_blank"
               class="link"
             >
-              <h3>Nashville B🍩ps Next Up</h3>
+              <h3>Nashville Bops Next Up</h3>
             </b-link>
 
             <iframe
