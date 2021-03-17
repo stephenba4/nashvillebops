@@ -4,7 +4,7 @@
       <b-card>
         <b-img src="./../assets/nashvillebops.png" height="100" />
 
-        <h2>Bop Of The Day</h2>
+        <h1>B🍩p Of The Day</h1>
 
         <iframe
           src="https://cdn.lightwidget.com/widgets/5863079d5e015aeba699277b8929c0e9.html"
@@ -12,35 +12,24 @@
           height="250"
           scrolling="yes"
           allowtransparency="true"
-          class="lightwidget-widget"
+          class="lightwidget-widget mt-2"
           style="border:0;overflow:hidden;"
         />
 
         <h5 class="m-3">
-          Instagram:
-          <b-link href="https://www.instagram.com/nashvillebops/" target="_blank">
+          <b-icon icon="instagram" />
+          <b-link class="link" href="https://www.instagram.com/nashvillebops/" target="_blank">
             @nashvillebops
           </b-link>
         </h5>
       </b-card>
 
       <b-card class="mt-4">
-        <h2 class="ml-3 mr-3">
-          Nashville Bops Roster
-        </h2>
-        <h6 class="m-3">
-          Rising Nashville pop artists that have been featured on
-          <b-link href="https://www.instagram.com/nashvillebops/" target="_blank">
-            Nashville Bops Instagram
-          </b-link>
-          or
-          <b-link href="https://open.spotify.com/playlist/58NEDLN8pRY27qU4zkWuZV" target="_blank">
-            Nashville Bops Next Up Spotify Playlist
-          </b-link>
-        </h6>
-
+        <h1 class="ml-3 mr-3">
+          Nashville B🍩ps 💯
+        </h1>
         <h5 class="m-3">
-          Total # of Artists: {{ spotifyData.length }}
+          100 of the hottest pop artists from Nashville 🔥
         </h5>
 
         <b-form-group>
@@ -101,16 +90,24 @@
               {{ formatNumber(data.item.spotifyFollowers) }}
             </h4>
           </template>
+
+          <template #head(spotifyFollowers)="">
+            <i class="fa fa-spotify mr-2" />Followers:
+          </template>
         </b-table>
       </b-card>
 
       <b-row>
         <b-col>
           <b-card class="mt-4">
-            <h2>Spotify Playlist:</h2>
+            <h1><i class="fa fa-spotify m-2" />Playlist</h1>
 
-            <b-link href="https://open.spotify.com/playlist/58NEDLN8pRY27qU4zkWuZV" target="_blank">
-              <h5>Nashville Bops Next Up</h5>
+            <b-link
+              href="https://open.spotify.com/playlist/58NEDLN8pRY27qU4zkWuZV"
+              target="_blank"
+              class="link"
+            >
+              <h5>Nashville B🍩ps Next Up</h5>
             </b-link>
 
             <iframe
@@ -120,6 +117,7 @@
               frameborder="0"
               allowtransparency="true"
               allow="encrypted-media"
+              class="mt-2"
             />
           </b-card>
         </b-col>
@@ -154,7 +152,7 @@ export default {
   created() {
     NameService.get()
       .then((response) => {
-        this.spotifyData = response.data
+        this.spotifyData = response.data.slice(0, 100)
         this.isBusy = false
       })
       .catch((e) => {

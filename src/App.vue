@@ -12,15 +12,20 @@
 
     <footer id="footer" class="p-3">
       <p class="mt-2">
-        For song submissions and other inquiries email: stephen@nashvillebops.com
+        For song submissions and other inquiries email stephen@nashvillebops.com
       </p>
     </footer>
   </div>
 </template>
 
 <style>
+@font-face {
+  font-family: "Nunito";
+  src: local("Nunito"),
+    url(./fonts/Nunito-SemiBold.ttf) format("truetype");
+}
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Nunito', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -35,4 +40,8 @@
   background-color: #fc69c1;
   text-align: center;
 }
+.link {
+  color: #fc69c1;
+}
+
 </style>

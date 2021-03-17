@@ -12,30 +12,28 @@
         </h1>
 
         <b-card class="m-3">
-          <h5>
-            Social Links:
-          </h5>
-
-          <h6 class="mb-2">
-            <b-link :href="row.spotify" target="_blank">
-              Spotify Account
-            </b-link>
-          </h6>
-
-          <h6>
-            <b-link :href="artistData.instagram" target="_blank">
-              Instagram Account
-            </b-link>
-          </h6>
+          <h2>
+            <i class="fa fa-spotify m-2" />Followers:
+          </h2>
+          <h2>
+            {{ formatNumber(row.spotifyFollowers) }}
+          </h2>
         </b-card>
 
         <b-card class="m-3">
-          <h5>
-            Spotify Followers:
-          </h5>
-          <h6>
-            {{ formatNumber(row.spotifyFollowers) }}
-          </h6>
+          <h2>
+            Social Accounts:
+          </h2>
+
+          <h2 class="m-2">
+            <b-link :href="row.spotify" target="_blank" class="m-4 link">
+              <i class="fa fa-spotify" />
+            </b-link>
+
+            <b-link :href="artistData.instagram" target="_blank" class="m-4 link">
+              <b-icon icon="instagram" />
+            </b-link>
+          </h2>
         </b-card>
 
         <b-card class="m-3">
