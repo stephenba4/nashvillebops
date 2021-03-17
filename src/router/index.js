@@ -15,7 +15,6 @@ const routes = [
     path: '/artistProfile',
     name: 'Artist Profile',
     component: ArtistProfile,
-    props: true,
   },
 ];
 

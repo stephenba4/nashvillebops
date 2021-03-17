@@ -161,7 +161,16 @@ export default {
   },
   methods: {
     toArtistProfile(row) {
-      this.$router.push({ name: 'Artist Profile', params: { row } });
+      this.$router.push({
+        name: 'Artist Profile',
+        query: {
+          id: row.id,
+          img: row.img,
+          artist: row.artist,
+          spotifyFollowers: row.spotifyFollowers,
+          spotify: row.spotify,
+        },
+      });
     },
     formatNumber(num) {
       return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
