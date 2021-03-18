@@ -67,9 +67,9 @@
           </template>
 
           <template #cell(position)="data">
-            <h1 class="mt-3">
+            <h3 class="mt-3">
               {{ data.item.position }}
-            </h1>
+            </h3>
           </template>
 
           <template #cell(artist)="data">
@@ -80,29 +80,29 @@
                 rounded
               />
             </div>
-            <div style="font-size: small">
-              <h4>
+            <div>
+              <h6>
                 {{ data.item.artist }}
-              </h4>
+              </h6>
             </div>
           </template>
 
           <template #head(artist)="">
-            <h4>
+            <h6>
               Artist
-            </h4>
+            </h6>
           </template>
 
           <template #cell(spotifyFollowers)="data">
-            <h3 class="mt-4">
+            <h5 class="mt-4">
               {{ formatNumber(data.item.spotifyFollowers) }}
-            </h3>
+            </h5>
           </template>
 
           <template #head(spotifyFollowers)="">
-            <h4>
+            <h6>
               <i class="fa fa-spotify mr-2" />Followers
-            </h4>
+            </h6>
           </template>
         </b-table>
       </b-card>

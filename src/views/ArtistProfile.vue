@@ -7,25 +7,25 @@
           width="250"
           rounded
         />
-        <h1 class="m-3">
+        <h2 class="m-3">
           {{ artist }}
-        </h1>
+        </h2>
 
         <b-card class="m-3">
-          <h1>
+          <h3>
             <i class="fa fa-spotify m-2" />Followers
-          </h1>
-          <h1>
+          </h3>
+          <h3>
             {{ formatNumber(spotifyFollowers) }}
-          </h1>
+          </h3>
         </b-card>
 
         <b-card class="m-3">
-          <h1>
+          <h3>
             Social Accounts
-          </h1>
+          </h3>
 
-          <h1 class="m-2">
+          <h3 class="m-2">
             <b-link :href="spotify" target="_blank" class="m-4 link">
               <i class="fa fa-spotify" />
             </b-link>
@@ -33,7 +33,7 @@
             <b-link :href="artistData.instagram" target="_blank" class="m-4 link">
               <b-icon icon="instagram" />
             </b-link>
-          </h1>
+          </h3>
         </b-card>
 
         <b-card class="m-3">

@@ -1,7 +1,8 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import ArtistProfile from '@/views/ArtistProfile.vue';
-import ArtistChart from '../views/ArtistChart.vue';
+import ArtistChart from '@/views/ArtistChart.vue';
+import About from '@/views/About.vue';
 
 Vue.use(VueRouter);
 
@@ -15,6 +16,11 @@ const routes = [
     path: '/artistProfile',
     name: 'Artist Profile',
     component: ArtistProfile,
+  },
+  {
+    path: '/about',
+    name: 'About',
+    component: About,
   },
 ];
 

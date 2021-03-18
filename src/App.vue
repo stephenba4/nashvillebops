@@ -1,26 +1,43 @@
 <template>
   <div id="app">
-    <b-navbar id="navbar">
+    <b-navbar id="navbar" toggleable>
       <router-link :to="{name: 'Artist Chart'}">
         <b-navbar-brand>
           <b-img src="./assets/nashvillebops.png" height="60" />
         </b-navbar-brand>
       </router-link>
+
+      <b-navbar-toggle target="navbar-toggle-collapse">
+        <template #default="{ expanded }">
+          <b-icon v-if="expanded" icon="chevron-up" />
+          <b-icon v-else icon="list" />
+        </template>
+      </b-navbar-toggle>
+
+      <b-collapse id="navbar-toggle-collapse" is-nav>
+        <b-navbar-nav class="ml-auto">
+          <b-nav-item :to="{name: 'About'}">
+            <h3>
+              About
+            </h3>
+          </b-nav-item>
+        </b-navbar-nav>
+      </b-collapse>
     </b-navbar>
 
     <router-view />
 
     <footer id="footer" class="p-3">
-      <h3 class="mt-2">
+      <p class="mt-2">
         For song submissions and other inquiries email stephen@nashvillebops.com
-      </h3>
+      </p>
     </footer>
   </div>
 </template>
 
 <style>
 #app {
-  font-family: 'Reenie Beanie', Helvetica, Arial, sans-serif;
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
