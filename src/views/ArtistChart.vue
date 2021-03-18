@@ -2,8 +2,9 @@
   <div class="justify-content-center pt-4 pb-4">
     <b-container fluid style="max-width: 700px;">
       <b-card>
+        <b-img src="./../assets/nashvillebops.png" height="60" />
+
         <h2 class="m-2">
-          <b-img src="./../assets/nashvillebops.png" height="40" class="mb-2" />
           BOP OF THE DAY
         </h2>
 
@@ -26,9 +27,10 @@
       </b-card>
 
       <b-card class="mt-4">
+        <b-img src="./../assets/nashvillebops.png" height="60" />
+
         <h2 class="m-2">
-          <b-img src="./../assets/nashvillebops.png" height="40" class="mb-2" />
-          Nashville's 100 Hottest Pop Artists 🔥
+          Nashville's 100 Hottest Pop Artists
         </h2>
 
         <b-form-group>
@@ -103,7 +105,7 @@
 
           <template #head(spotifyFollowers)="">
             <h5>
-              <i class="fa fa-spotify mr-2" />
+              <i class="fa fa-spotify" />
               Followers
             </h5>
           </template>
@@ -114,7 +116,7 @@
         <b-col>
           <b-card class="mt-4">
             <h2>
-              <i class="fa fa-spotify m-2" />
+              <i class="fa fa-spotify" />
               PLAYLIST
             </h2>
 

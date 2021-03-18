@@ -3,7 +3,7 @@
     <b-navbar id="navbar" toggleable>
       <router-link :to="{name: 'Artist Chart'}">
         <b-navbar-brand>
-          <b-img src="./assets/nashvillebops.png" height="60" />
+          <b-img src="./assets/nashvillebops.png" height="40" />
         </b-navbar-brand>
       </router-link>
 
@@ -37,7 +37,7 @@
 
 <style>
 #app {
-  font-family: 'PT Sans Narrow', Helvetica, Arial, sans-serif;
+  font-family: 'Fjalla One', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

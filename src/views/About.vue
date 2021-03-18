@@ -2,7 +2,7 @@
   <div class=" pt-4 pb-4">
     <b-container fluid style="max-width: 700px;">
       <b-card>
-        <h4>What Is Nashville Bops?</h4>
+        <h4>What is Nashville Bops?</h4>
         <br>
         <b>Instagram:</b> Everyday we feature a “Bop Of The Day”
         by an up and coming Nashville pop artist.
@@ -23,7 +23,7 @@
         learn more about them.
         <br>
         <br>
-        <h4>Song And Artist Submissions</h4>
+        <h4>Song and Artist Submissions</h4>
         <br>
         If you would like us to feature a song
         or an artist on our Instagram, Spotify or
@@ -31,7 +31,7 @@
         artist to stephen@nashvillebops.com.
         <br>
         <br>
-        <h4>Connect With Us</h4>
+        <h4>Connect with Us</h4>
         <br>
         We’re growing and will be improving
         ways we can support Nashville pop artists.

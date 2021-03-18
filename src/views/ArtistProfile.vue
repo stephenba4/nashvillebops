@@ -13,7 +13,8 @@
 
         <b-card class="m-3">
           <h3>
-            <i class="fa fa-spotify m-2" />Followers
+            <i class="fa fa-spotify" />
+            Followers
           </h3>
           <h3>
             {{ formatNumber(spotifyFollowers) }}
