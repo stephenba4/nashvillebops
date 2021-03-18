@@ -37,7 +37,7 @@
 
 <style>
 #app {
-  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  font-family: 'PT Sans Narrow', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -54,6 +54,9 @@
 }
 .link {
   color: #fc69c1;
+}
+.tables td {
+  vertical-align: middle !important;
 }
 
 </style>

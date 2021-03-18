@@ -2,9 +2,10 @@
   <div class="justify-content-center pt-4 pb-4">
     <b-container fluid style="max-width: 700px;">
       <b-card>
-        <b-img src="./../assets/nashvillebops.png" height="80" />
-
-        <h1>BOP OF THE DAY</h1>
+        <h2 class="m-2">
+          <b-img src="./../assets/nashvillebops.png" height="40" class="mb-2" />
+          BOP OF THE DAY
+        </h2>
 
         <iframe
           src="https://cdn.lightwidget.com/widgets/5863079d5e015aeba699277b8929c0e9.html"
@@ -25,12 +26,10 @@
       </b-card>
 
       <b-card class="mt-4">
-        <h1 class="ml-2 mr-2">
-          NASHVILLE BOPS 100
-        </h1>
-        <h3 class="m-2">
-          Nashville's Hottest Pop Artists
-        </h3>
+        <h2 class="m-2">
+          <b-img src="./../assets/nashvillebops.png" height="40" class="mb-2" />
+          Nashville's 100 Hottest Pop Artists 🔥
+        </h2>
 
         <b-form-group>
           <b-input-group size="sm" class="justify-content-center">
@@ -57,17 +56,18 @@
           hover
           sticky-header="1000px"
           :busy="isBusy"
+          class="tables"
           @row-clicked="toArtistProfile"
         >
           <template #table-busy>
-            <div class="text-center text-danger my-2">
-              <b-spinner class="align-middle" />
-              <strong class="m-3">Loading...</strong>
-            </div>
+            <h4 class="text-center text-danger my-2">
+              <b-spinner class="align-middle mr-3" />
+              Loading...
+            </h4>
           </template>
 
           <template #cell(position)="data">
-            <h3 class="mt-3">
+            <h3>
               {{ data.item.position }}
             </h3>
           </template>
@@ -88,21 +88,24 @@
           </template>
 
           <template #head(artist)="">
-            <h6>
+            <h5>
               Artist
-            </h6>
-          </template>
-
-          <template #cell(spotifyFollowers)="data">
-            <h5 class="mt-4">
-              {{ formatNumber(data.item.spotifyFollowers) }}
             </h5>
           </template>
 
+          <template #cell(spotifyFollowers)="data">
+            <div>
+              <h5 class="text-center">
+                {{ formatNumber(data.item.spotifyFollowers) }}
+              </h5>
+            </div>
+          </template>
+
           <template #head(spotifyFollowers)="">
-            <h6>
-              <i class="fa fa-spotify mr-2" />Followers
-            </h6>
+            <h5>
+              <i class="fa fa-spotify mr-2" />
+              Followers
+            </h5>
           </template>
         </b-table>
       </b-card>
@@ -110,10 +113,10 @@
       <b-row>
         <b-col>
           <b-card class="mt-4">
-            <h1>
+            <h2>
               <i class="fa fa-spotify m-2" />
               PLAYLIST
-            </h1>
+            </h2>
 
             <b-link
               href="https://open.spotify.com/playlist/58NEDLN8pRY27qU4zkWuZV"
