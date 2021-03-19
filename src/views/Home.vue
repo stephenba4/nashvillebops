@@ -12,7 +12,7 @@
           height="250"
           scrolling="yes"
           allowtransparency="true"
-          class="lightwidget-widget mt-2"
+          class="lightwidget-widget mt-2 rounded-lg"
           style="border:0;overflow:hidden;"
         />
       </b-card>
@@ -127,7 +127,7 @@
               frameborder="0"
               allowtransparency="true"
               allow="encrypted-media"
-              class="mt-2"
+              class="mt-2 rounded-lg"
             />
           </b-card>
         </b-col>

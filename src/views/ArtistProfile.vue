@@ -54,7 +54,7 @@
             frameborder="0"
             allowtransparency="true"
             allow="encrypted-media"
-            class="mt-2"
+            class="mt-2 rounded-lg"
           />
         </b-card>
       </b-card>
