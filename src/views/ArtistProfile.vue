@@ -12,29 +12,29 @@
         </h2>
 
         <b-card class="m-3">
-          <h3>
+          <h4 id="gumfont">
             <i class="fa fa-spotify" />
-            Followers
-          </h3>
-          <h3>
+            <b-img src="./../assets/followers.png" height="28" />
+          </h4>
+          <h4>
             {{ formatNumber(spotifyFollowers) }}
-          </h3>
+          </h4>
         </b-card>
 
         <b-card class="m-3">
-          <h3>
-            Social Accounts
-          </h3>
+          <div>
+            <b-img src="./../assets/socialAccounts.png" height="28" />
+          </div>
 
-          <h3 class="m-2">
-            <b-link :href="spotify" target="_blank" class="m-4 link">
+          <h4 class="m-2">
+            <b-link :href="spotify" target="_blank" class="m-2 link">
               <i class="fa fa-spotify" />
             </b-link>
 
-            <b-link :href="artistData.instagram" target="_blank" class="m-4 link">
+            <b-link :href="artistData.instagram" target="_blank" class="m-2 link">
               <b-icon icon="instagram" />
             </b-link>
-          </h3>
+          </h4>
         </b-card>
 
         <b-card class="m-3">

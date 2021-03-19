@@ -2,11 +2,9 @@
   <div class="justify-content-center pt-4 pb-4">
     <b-container fluid style="max-width: 700px;">
       <b-card>
-        <b-img src="./../assets/nashvillebops.png" height="60" />
-
-        <h2 class="m-2">
-          BOP OF THE DAY
-        </h2>
+        <div class="m-2">
+          <b-img src="./../assets/bopOfTheDay.png" height="40" />
+        </div>
 
         <iframe
           src="https://cdn.lightwidget.com/widgets/5863079d5e015aeba699277b8929c0e9.html"
@@ -17,21 +15,13 @@
           class="lightwidget-widget mt-2"
           style="border:0;overflow:hidden;"
         />
-
-        <h3 class="m-3">
-          <b-icon icon="instagram" />
-          <b-link class="link" href="https://www.instagram.com/nashvillebops/" target="_blank">
-            @nashvillebops
-          </b-link>
-        </h3>
       </b-card>
 
       <b-card class="mt-4">
-        <b-img src="./../assets/nashvillebops.png" height="60" />
-
-        <h2 class="m-2">
-          Nashville's 100 Hottest Pop Artists
-        </h2>
+        <div class="mt-2 mb-2">
+          <b-img src="./../assets/100HottestPop.png" height="32" />
+          <b-img src="./../assets/artistsInNashville.png" height="32" />
+        </div>
 
         <b-form-group>
           <b-input-group size="sm" class="justify-content-center">
@@ -75,16 +65,30 @@
           </template>
 
           <template #cell(artist)="data">
-            <div>
+            <div class="mt-2">
               <b-img
                 :src="data.item.img"
                 width="60"
                 rounded
               />
             </div>
-            <div>
+            <div class="mt-1">
               <h6>
-                {{ data.item.artist }}
+                <router-link
+                  class="link"
+                  :to="{
+                    name: 'Artist Profile',
+                    query: {
+                      id: data.item.id,
+                      img: data.item.img,
+                      artist: data.item.artist,
+                      spotifyFollowers: data.item.spotifyFollowers,
+                      spotify: data.item.spotify,
+                    },
+                  }"
+                >
+                  {{ data.item.artist }}
+                </router-link>
               </h6>
             </div>
           </template>
@@ -117,16 +121,8 @@
           <b-card class="mt-4">
             <h2>
               <i class="fa fa-spotify" />
-              PLAYLIST
+              <b-img src="./../assets/playlist.png" height="40" />
             </h2>
-
-            <b-link
-              href="https://open.spotify.com/playlist/58NEDLN8pRY27qU4zkWuZV"
-              target="_blank"
-              class="link"
-            >
-              <h3>Nashville Bops Next Up</h3>
-            </b-link>
 
             <iframe
               src="https://open.spotify.com/embed/playlist/58NEDLN8pRY27qU4zkWuZV"

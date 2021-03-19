@@ -17,21 +17,15 @@
       <b-collapse id="navbar-toggle-collapse" is-nav>
         <b-navbar-nav class="ml-auto">
           <b-nav-item :to="{name: 'About'}">
-            <h3>
+            <h4>
               About
-            </h3>
+            </h4>
           </b-nav-item>
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>
 
     <router-view />
-
-    <footer id="footer" class="p-3">
-      <p class="mt-2">
-        For song submissions and other inquiries email stephen@nashvillebops.com
-      </p>
-    </footer>
   </div>
 </template>
 
@@ -48,15 +42,15 @@
   background-color: #fc69c1;
   text-align: center;
 }
-#footer {
-  background-color: #fc69c1;
-  text-align: center;
-}
 .link {
   color: #fc69c1;
+  text-decoration: underline;
 }
 .tables td {
   vertical-align: middle !important;
+}
+.header {
+  color: #fc69c1;
 }
 
 </style>

@@ -2,40 +2,66 @@
   <div class=" pt-4 pb-4">
     <b-container fluid style="max-width: 700px;">
       <b-card>
-        <h4>What is Nashville Bops?</h4>
+        <div class="mt-2">
+          <b-img src="./../assets/aboutNashville.png" height="32" />
+          <b-img src="./../assets/bops.png" height="32" />
+        </div>
         <br>
-        <b>Instagram:</b> Everyday we feature a “Bop Of The Day”
-        by an up and coming Nashville pop artist.
+        <h5 class="header" style="font-weight: bold;">
+          Instagram
+        </h5>
+        Everyday we feature a
+        <b-link class="link" href="https://www.instagram.com/nashvillebops/" target="_blank">
+          Bop Of The Day
+        </b-link>
+        by up and coming Nashville pop artists.
         <br>
         <br>
-        <b>Spotify:</b> Every month we update
-        the Nashville Bops Next Up playlist with 15
-        new songs by Nashville pop artists that
-        we’ve recently featured on Instagram.
+        <h5 class="header" style="font-weight: bold;">
+          Spotify
+        </h5>
+        Every month we update
+        the
+        <b-link
+          href="https://open.spotify.com/playlist/58NEDLN8pRY27qU4zkWuZV"
+          target="_blank"
+          class="link"
+        >
+          Nashville Bops Next Up
+        </b-link>
+        playlist with 15
+        new songs from our Instagram.
         <br>
         <br>
-        <b>Website:</b> Along with showing
-        the Bop Of The Day and our Spotify playlist,
-        we have a chart of the top 100 pop artists
-        we’ve had the opportunity to feature on
-        Instagram. Each artist has a profile
+        <h5 class="header" style="font-weight: bold;">
+          Website
+        </h5>
+        Along with showing
+        the "Bop Of The Day" and our Spotify playlist,
+        we have the "100 Hottest Pop Artists In Nashville" chart
+        with artists we have had the opportunity to feature on
+        our Instagram. Each artist has a profile
         you can view to listen to their music and
         learn more about them.
         <br>
         <br>
-        <h4>Song and Artist Submissions</h4>
+        <div>
+          <b-img src="./../assets/songAndArtist.png" height="32" />
+          <b-img src="./../assets/submissions.png" height="32" />
+        </div>
         <br>
-        If you would like us to feature a song
-        or an artist on our Instagram, Spotify or
-        website, please send info about the song or
-        artist to stephen@nashvillebops.com.
+        If you would like us to feature your song
+        or an artist, please send the information
+        to stephen@nashvillebops.com.
         <br>
         <br>
-        <h4>Connect with Us</h4>
+        <div>
+          <b-img src="./../assets/connectWithUs.png" height="32" />
+        </div>
         <br>
-        We’re growing and will be improving
-        ways we can support Nashville pop artists.
-        We’d love to hear your feedback, so if you
+        Nashville Bops is growing, and we aspire to
+        support Nashville pop artists in new ways.
+        We want your feedback, so if you
         have any suggestions or ideas, please send
         an email to stephen@nashvillebops.com.
         <br>
