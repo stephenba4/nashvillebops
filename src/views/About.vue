@@ -7,8 +7,11 @@
           <b-img src="./../assets/bops.png" height="32" />
         </div>
         <br>
-        <h5 class="header" style="font-weight: bold;">
-          Instagram
+        <h5>
+          <b-icon icon="instagram" />
+          <span class="header" style="font-weight: bold;">
+            Instagram
+          </span>
         </h5>
         Everyday we feature a
         <b-link class="link" href="https://www.instagram.com/nashvillebops/" target="_blank">
@@ -17,8 +20,10 @@
         by up and coming Nashville pop artists.
         <br>
         <br>
-        <h5 class="header" style="font-weight: bold;">
-          Spotify
+
+        <h5>
+          <i class="fa fa-spotify mr-1" />
+          <span class="header" style="font-weight: bold;">Spotify</span>
         </h5>
         Every month we update
         the

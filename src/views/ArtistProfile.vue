@@ -2,10 +2,15 @@
   <div class="justify-content-center pt-4 pb-4">
     <b-container fluid style="max-width: 700px;">
       <b-card>
+        <div class="m-2">
+          <b-img src="./../assets/artistProfile.png" height="32" />
+        </div>
+
         <b-img
           :src="img"
           width="250"
           rounded
+          class="mt-2"
         />
         <h2 class="m-3">
           {{ artist }}
@@ -38,6 +43,10 @@
         </b-card>
 
         <b-card class="m-3">
+          <h4>
+            <i class="fa fa-spotify" />
+            <b-img src="./../assets/topTracks.png" height="28" />
+          </h4>
           <iframe
             :src="spotifyPlayer"
             width="100%"
@@ -45,6 +54,7 @@
             frameborder="0"
             allowtransparency="true"
             allow="encrypted-media"
+            class="mt-2"
           />
         </b-card>
       </b-card>
@@ -56,6 +66,7 @@
 import { mapGetters } from 'vuex';
 
 export default {
+  name: 'ArtistProfile',
   data() {
     return {
       artistData: {},

@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <b-navbar id="navbar" toggleable>
-      <router-link :to="{name: 'Artist Chart'}">
+      <router-link :to="{name: 'Home'}">
         <b-navbar-brand>
           <b-img src="./assets/nashvillebops.png" height="40" />
         </b-navbar-brand>
@@ -16,6 +16,12 @@
 
       <b-collapse id="navbar-toggle-collapse" is-nav>
         <b-navbar-nav class="ml-auto">
+          <b-nav-item :to="{name: 'Home'}">
+            <h4>
+              Home
+            </h4>
+          </b-nav-item>
+
           <b-nav-item :to="{name: 'About'}">
             <h4>
               About

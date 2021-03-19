@@ -52,7 +52,7 @@
           @row-clicked="toArtistProfile"
         >
           <template #table-busy>
-            <h4 class="text-center text-danger my-2">
+            <h4 class="text-center text-secondary my-2">
               <b-spinner class="align-middle mr-3" />
               Loading...
             </h4>
@@ -94,9 +94,7 @@
           </template>
 
           <template #head(artist)="">
-            <h5>
-              Artist
-            </h5>
+            Artist
           </template>
 
           <template #cell(spotifyFollowers)="data">
@@ -108,10 +106,8 @@
           </template>
 
           <template #head(spotifyFollowers)="">
-            <h5>
-              <i class="fa fa-spotify" />
-              Followers
-            </h5>
+            <i class="fa fa-spotify" />
+            Followers
           </template>
         </b-table>
       </b-card>
@@ -145,12 +141,12 @@ import { mapGetters } from 'vuex';
 import NameService from '../services/NameService';
 
 export default {
-  name: 'ArtistChart',
+  name: 'Home',
   data() {
     return {
       filter: null,
       fields: [
-        { key: 'position', label: '' },
+        { key: 'position', label: '#' },
         { key: 'artist' },
         { key: 'spotifyFollowers' },
       ],

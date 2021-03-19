@@ -1,16 +1,16 @@
 import { shallowMount, createLocalVue } from '@vue/test-utils';
 import { BootstrapVue } from 'bootstrap-vue';
 import store from '@/store';
-import ArtistChart from '@/views/ArtistChart.vue';
+import Home from '@/views/Home.vue';
 
 const localVue = createLocalVue()
 
 localVue.use(BootstrapVue)
 
-describe('ArtistChart', () => {
+describe('Home', () => {
   it('renders', () => {
-    const wrapper = shallowMount(ArtistChart, { store, localVue });
-    const artistChart = wrapper.findComponent({ name: 'ArtistChart' })
-    expect(artistChart.exists()).toBe(true);
+    const wrapper = shallowMount(Home, { store, localVue });
+    const findHome = wrapper.findComponent({ name: 'Home' })
+    expect(findHome.exists()).toBe(true);
   });
 });
