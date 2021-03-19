@@ -2,7 +2,7 @@
   <div class=" pt-4 pb-4">
     <b-container fluid style="max-width: 700px;">
       <b-card>
-        <div class="mt-2">
+        <div>
           <b-img src="./../assets/aboutNashville.png" height="30" />
           <b-img src="./../assets/bops.png" height="30" />
         </div>
@@ -43,8 +43,6 @@
         our Instagram. Each artist has a profile
         you can view to listen to their music and
         learn more about them.
-        <br>
-        <br>
       </b-card>
       <b-card class="mt-4">
         <div>
@@ -55,8 +53,6 @@
         If you would like us to feature your song
         or an artist, please send the information
         to stephen@nashvillebops.com.
-        <br>
-        <br>
       </b-card>
       <b-card class="mt-4">
         <div>
@@ -68,7 +64,6 @@
         We want your feedback, so if you
         have any suggestions or ideas, please send
         an email to stephen@nashvillebops.com.
-        <br>
       </b-card>
     </b-container>
   </div>
