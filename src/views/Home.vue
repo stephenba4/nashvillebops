@@ -3,7 +3,7 @@
     <b-container fluid style="max-width: 700px;">
       <b-card>
         <div class="m-2">
-          <b-img src="./../assets/bopOfTheDay.png" height="40" />
+          <b-img src="./../assets/bopOfTheDay.png" height="36" />
         </div>
 
         <iframe
@@ -20,7 +20,8 @@
       <b-card class="mt-4">
         <div class="mt-2 mb-2">
           <b-img src="./../assets/100HottestPop.png" height="32" />
-          <b-img src="./../assets/artistsInNashville.png" height="32" />
+          <b-img src="./../assets/artists.png" height="32" />
+          <b-img src="./../assets/inNashville.png" height="32" />
         </div>
 
         <b-form-group>
@@ -59,16 +60,16 @@
           </template>
 
           <template #cell(position)="data">
-            <h3>
+            <h6>
               {{ data.item.position }}
-            </h3>
+            </h6>
           </template>
 
           <template #cell(artist)="data">
             <div class="mt-2">
               <b-img
                 :src="data.item.img"
-                width="60"
+                width="50"
                 rounded
               />
             </div>
@@ -99,9 +100,9 @@
 
           <template #cell(spotifyFollowers)="data">
             <div>
-              <h5 class="text-center">
+              <h6 class="text-center">
                 {{ formatNumber(data.item.spotifyFollowers) }}
-              </h5>
+              </h6>
             </div>
           </template>
 
@@ -117,7 +118,7 @@
           <b-card class="mt-4">
             <h2>
               <i class="fa fa-spotify" />
-              <b-img src="./../assets/playlist.png" height="40" />
+              <b-img src="./../assets/playlist.png" height="36" />
             </h2>
 
             <iframe

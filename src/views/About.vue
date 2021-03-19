@@ -3,29 +3,24 @@
     <b-container fluid style="max-width: 700px;">
       <b-card>
         <div class="mt-2">
-          <b-img src="./../assets/aboutNashville.png" height="32" />
-          <b-img src="./../assets/bops.png" height="32" />
+          <b-img src="./../assets/aboutNashville.png" height="30" />
+          <b-img src="./../assets/bops.png" height="30" />
         </div>
         <br>
-        <h5>
-          <b-icon icon="instagram" />
-          <span class="header" style="font-weight: bold;">
-            Instagram
-          </span>
+        <h5 class="header" style="font-weight: bold;">
+          Instagram
         </h5>
         Everyday we feature a
         <b-link class="link" href="https://www.instagram.com/nashvillebops/" target="_blank">
           Bop Of The Day
         </b-link>
-        by up and coming Nashville pop artists.
+        by an up and coming Nashville pop artist.
         <br>
         <br>
-
-        <h5>
-          <i class="fa fa-spotify mr-1" />
-          <span class="header" style="font-weight: bold;">Spotify</span>
+        <h5 class="header" style="font-weight: bold;">
+          Spotify
         </h5>
-        Every month we update
+        Each month we update
         the
         <b-link
           href="https://open.spotify.com/playlist/58NEDLN8pRY27qU4zkWuZV"
@@ -50,9 +45,11 @@
         learn more about them.
         <br>
         <br>
+      </b-card>
+      <b-card class="mt-4">
         <div>
-          <b-img src="./../assets/songAndArtist.png" height="32" />
-          <b-img src="./../assets/submissions.png" height="32" />
+          <b-img src="./../assets/songAndArtist.png" height="30" />
+          <b-img src="./../assets/submissions.png" height="30" />
         </div>
         <br>
         If you would like us to feature your song
@@ -60,8 +57,10 @@
         to stephen@nashvillebops.com.
         <br>
         <br>
+      </b-card>
+      <b-card class="mt-4">
         <div>
-          <b-img src="./../assets/connectWithUs.png" height="32" />
+          <b-img src="./../assets/connectWithUs.png" height="30" />
         </div>
         <br>
         Nashville Bops is growing, and we aspire to

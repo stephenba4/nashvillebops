@@ -3,7 +3,7 @@
     <b-container fluid style="max-width: 700px;">
       <b-card>
         <div class="m-2">
-          <b-img src="./../assets/artistProfile.png" height="32" />
+          <b-img src="./../assets/artistProfile.png" height="28" />
         </div>
 
         <b-img
@@ -19,7 +19,7 @@
         <b-card class="m-3">
           <h4 id="gumfont">
             <i class="fa fa-spotify" />
-            <b-img src="./../assets/followers.png" height="28" />
+            <b-img src="./../assets/followers.png" height="22" />
           </h4>
           <h4>
             {{ formatNumber(spotifyFollowers) }}
@@ -28,7 +28,7 @@
 
         <b-card class="m-3">
           <div>
-            <b-img src="./../assets/socialAccounts.png" height="28" />
+            <b-img src="./../assets/socialAccounts.png" height="22" />
           </div>
 
           <h4 class="m-2">
@@ -45,7 +45,7 @@
         <b-card class="m-3">
           <h4>
             <i class="fa fa-spotify" />
-            <b-img src="./../assets/topTracks.png" height="28" />
+            <b-img src="./../assets/topTracks.png" height="22" />
           </h4>
           <iframe
             :src="spotifyPlayer"
