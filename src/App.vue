@@ -42,7 +42,7 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  background-color: #FDA0D8;
+  background-color: white;
 }
 #navbar {
   background-color: #fc69c1;

@@ -41,7 +41,7 @@
         we have the "100 Hottest Pop Artists In Nashville" chart
         with artists we have had the opportunity to feature on
         our Instagram. Each artist has a profile
-        you can view to listen to their music and
+        where you can listen to their music and
         learn more about them.
       </b-card>
       <b-card class="mt-4">

@@ -12,52 +12,58 @@
           rounded
           class="mt-2"
         />
+
         <h2 class="m-3">
           {{ artist }}
         </h2>
+      </b-card>
 
-        <b-card class="m-3">
-          <h4 id="gumfont">
+      <b-card class="mt-4">
+        <h4 id="gumfont">
+          <i class="fa fa-spotify" />
+
+          <b-img src="./../assets/followers.png" height="28" />
+        </h4>
+
+        <h4>
+          {{ formatNumber(spotifyFollowers) }}
+        </h4>
+
+        <br>
+
+        <div>
+          <b-img src="./../assets/social.png" height="28" />
+
+          <b-img src="./../assets/accounts.png" height="28" />
+        </div>
+
+        <h4 class="m-2">
+          <b-link :href="spotify" target="_blank" class="m-2 link">
             <i class="fa fa-spotify" />
-            <b-img src="./../assets/followers.png" height="28" />
-          </h4>
-          <h4>
-            {{ formatNumber(spotifyFollowers) }}
-          </h4>
-        </b-card>
+          </b-link>
 
-        <b-card class="m-3">
-          <div>
-            <b-img src="./../assets/social.png" height="28" />
-            <b-img src="./../assets/accounts.png" height="28" />
-          </div>
+          <b-link :href="artistData.instagram" target="_blank" class="m-2 link">
+            <b-icon icon="instagram" />
+          </b-link>
+        </h4>
 
-          <h4 class="m-2">
-            <b-link :href="spotify" target="_blank" class="m-2 link">
-              <i class="fa fa-spotify" />
-            </b-link>
+        <br>
 
-            <b-link :href="artistData.instagram" target="_blank" class="m-2 link">
-              <b-icon icon="instagram" />
-            </b-link>
-          </h4>
-        </b-card>
+        <h4>
+          <i class="fa fa-spotify" />
 
-        <b-card class="m-3">
-          <h4>
-            <i class="fa fa-spotify" />
-            <b-img src="./../assets/topTracks.png" height="28" />
-          </h4>
-          <iframe
-            :src="spotifyPlayer"
-            width="100%"
-            height="300"
-            frameborder="0"
-            allowtransparency="true"
-            allow="encrypted-media"
-            class="mt-2 rounded-lg"
-          />
-        </b-card>
+          <b-img src="./../assets/topTracks.png" height="28" />
+        </h4>
+
+        <iframe
+          :src="spotifyPlayer"
+          width="250"
+          height="300"
+          frameborder="0"
+          allowtransparency="true"
+          allow="encrypted-media"
+          class="mt-2 rounded-lg"
+        />
       </b-card>
     </b-container>
   </div>
