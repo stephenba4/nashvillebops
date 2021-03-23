@@ -22,6 +22,9 @@
           <b-img src="./../assets/100HottestPop.png" height="32" />
           <b-img src="./../assets/artists.png" height="32" />
           <b-img src="./../assets/inNashville.png" height="32" />
+          <p class="mt-2">
+            *Click an artist to view their profile
+          </p>
         </div>
 
         <b-form-group>
