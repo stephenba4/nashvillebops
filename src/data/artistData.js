@@ -254,6 +254,16 @@ const artistArr = [
   { id: '0f1BcubFYDkGOTA0bJ0u1w', instagram: 'https://www.instagram.com/emilyrowed/' },
   { id: '0f1BcubFYDkGOTA0bJ0u1w', instagram: 'https://www.instagram.com/emilyrowed/' },
   { id: '2yNrYw8mzyKP9Ph4ZpFM8X', instagram: 'https://www.instagram.com/gmusicc/' },
+  { id: '5KVu4Yj0TegphGrOgSRR1U', instagram: 'https://www.instagram.com/_shockley_/' },
+  { id: '3dzJsVhnfcsgEQpUbpYCbu', instagram: 'https://www.instagram.com/phenixredmusic/' },
+  { id: '2VSHKHBTiXWplO8lxcnUC9', instagram: 'https://www.instagram.com/gayle/' },
+  { id: '091DrNc7RWkJYwVFI9aA8X', instagram: 'https://www.instagram.com/treyschafer/' },
+  { id: '1jEfncwQzrp3z4RV6HMQU3', instagram: 'https://www.instagram.com/ihatemvxwl/' },
+  { id: '6XoELaxT3wxWJHfR5QrYaU', instagram: 'https://www.instagram.com/evancline_/' },
+  { id: '3Tqps31ekhHVR7ylpNUzSj', instagram: 'https://www.instagram.com/stefanicolvin/' },
+  { id: '0sYtyqjtpG6e35rn2PY4yY', instagram: 'https://www.instagram.com/hael_music/' },
+  { id: '3WHWgx8Dh0IqQT1BMDTeE3', instagram: 'https://www.instagram.com/grahambarham/' },
+  { id: '7Ez6lTtSMjMf2YSYpukP1I', instagram: 'https://www.instagram.com/dashamusic/' },
 ]
 
 const distinctArtists = _.uniqBy(artistArr, 'id')

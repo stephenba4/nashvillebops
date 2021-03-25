@@ -1,49 +1,23 @@
 <template>
   <div class="justify-content-center pt-4 pb-4">
     <b-container fluid style="max-width: 700px;">
-      <b-card>
-        <div class="m-2">
-          <b-img src="./../assets/bopOfTheDay.png" height="36" />
-        </div>
-
-        <iframe
-          src="https://cdn.lightwidget.com/widgets/5863079d5e015aeba699277b8929c0e9.html"
-          width="250"
-          height="250"
-          scrolling="yes"
-          allowtransparency="true"
-          class="lightwidget-widget mt-2 rounded-lg"
-          style="border:0;overflow:hidden;"
-        />
-      </b-card>
-
       <b-card class="mt-4">
         <div>
-          <b-img src="./../assets/100HottestPop.png" height="32" />
-          <b-img src="./../assets/artists.png" height="32" />
-          <b-img src="./../assets/inNashville.png" height="32" />
+          <b-img src="./../assets/nashvillebops.png" height="32" />
+          <b-img src="./../assets/nextUp.png" height="32" />
         </div>
 
         <p class="mt-2">
+          15 of the hottest songs recently dropped by Nashville pop artists. Updated monthly.
+        </p>
+
+        <p>
           *Click an artist to view their profile
         </p>
 
-        <b-form-group>
-          <b-input-group size="sm" class="justify-content-center">
-            <b-form-input
-              id="filter-input"
-              v-model="filter"
-              type="search"
-              placeholder="Search"
-              style="max-width: 300px;"
-            />
-          </b-input-group>
-        </b-form-group>
-
         <b-table
           :fields="fields"
-          :items="top100Data"
-          :filter="filter"
+          :items="nextUpData"
           striped
           responsive
           bordered
@@ -116,6 +90,23 @@
           </template>
         </b-table>
       </b-card>
+
+      <b-card class="mt-4">
+        <h2>
+          <i class="fa fa-spotify" />
+          <b-img src="./../assets/playlist.png" height="36" />
+        </h2>
+
+        <iframe
+          src="https://open.spotify.com/embed/playlist/58NEDLN8pRY27qU4zkWuZV"
+          width="250"
+          height="400"
+          frameborder="0"
+          allowtransparency="true"
+          allow="encrypted-media"
+          class="mt-2 rounded-lg"
+        />
+      </b-card>
     </b-container>
   </div>
 </template>
@@ -124,10 +115,9 @@
 import SpotifyService from '../services/SpotifyService'
 
 export default {
-  name: 'Home',
+  name: 'NextUp',
   data() {
     return {
-      filter: null,
       fields: [
         { key: 'position', label: '#' },
         { key: 'artist' },
@@ -135,14 +125,14 @@ export default {
       ],
       sortBy: 'spotifyFollowers',
       sortDesc: true,
-      top100Data: [],
+      nextUpData: [],
       isBusy: true,
     }
   },
   created() {
-    SpotifyService.getTop100()
+    SpotifyService.getNextUp()
       .then((response) => {
-        this.top100Data = response.data.slice(0, 100)
+        this.nextUpData = response.data
         this.isBusy = false
       })
       .catch((e) => {
@@ -166,5 +156,5 @@ export default {
       return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
     },
   },
-};
+}
 </script>

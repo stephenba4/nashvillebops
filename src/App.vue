@@ -17,15 +17,27 @@
       <b-collapse id="navbar-toggle-collapse" is-nav>
         <b-navbar-nav class="ml-auto">
           <b-nav-item :to="{name: 'Home'}">
-            <h4>
+            <h6>
               Home
-            </h4>
+            </h6>
+          </b-nav-item>
+
+          <b-nav-item :to="{ name: 'Next Up' }">
+            <h6>
+              Nashville Bops Next Up
+            </h6>
+          </b-nav-item>
+
+          <b-nav-item :to="{ name: 'Weekly Radar' }">
+            <h6>
+              Nashville Bops Weekly Radar
+            </h6>
           </b-nav-item>
 
           <b-nav-item :to="{name: 'About'}">
-            <h4>
+            <h6>
               About
-            </h4>
+            </h6>
           </b-nav-item>
         </b-navbar-nav>
       </b-collapse>
@@ -46,7 +58,6 @@
 }
 #navbar {
   background-color: #fc69c1;
-  text-align: center;
 }
 .link {
   color: #fc69c1;
