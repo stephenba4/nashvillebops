@@ -3,37 +3,33 @@
     <div>
       <div>
         <b-img src="./../assets/nashvillebops.png" height="50" />
-        <b-img src="./../assets/weekly.png" height="32" />
-        <b-img src="./../assets/radar.png" height="32" />
+        <b-img src="./../assets/top100.png" height="32" />
       </div>
 
       <p class="mt-2">
-        10 rising Nashville pop songs
+        Top 100 Nashville pop artists previously featured as Bop Of The Day
       </p>
 
-      <iframe
-        src="https://open.spotify.com/embed/playlist/2RAgrtMEF6ZTTg2jh3FNY2"
-        width="250"
-        height="300"
-        frameborder="0"
-        allowtransparency="true"
-        allow="encrypted-media"
-        class="rounded-lg"
-      />
-    </div>
-
-    <div class="mt-4">
-      <div>
-        <b-img src="./../assets/artistChart.png" height="32" />
-      </div>
-
-      <p class="mt-2">
+      <p>
         *Click an artist to listen to their top songs
       </p>
 
+      <b-form-group>
+        <b-input-group size="sm" class="justify-content-center">
+          <b-form-input
+            id="filter-input"
+            v-model="filter"
+            type="search"
+            placeholder="Search"
+            style="max-width: 300px;"
+          />
+        </b-input-group>
+      </b-form-group>
+
       <b-table
         :fields="fields"
-        :items="weeklyRadarData"
+        :items="top100Data"
+        :filter="filter"
         striped
         responsive
         bordered
@@ -41,8 +37,8 @@
         :sort-by.sync="sortBy"
         :sort-desc="sortDesc"
         hover
-        sticky-header="800px"
-        :busy="isWeeklyRadarBusy"
+        sticky-header="1000px"
+        :busy="isTop100Busy"
         class="tables"
         @row-clicked="toArtistProfile"
       >
@@ -113,9 +109,10 @@
 import { mapState } from 'vuex'
 
 export default {
-  name: 'WeeklyRadar',
+  name: 'Top100',
   data() {
     return {
+      filter: null,
       fields: [
         { key: 'position', label: '#' },
         { key: 'artist' },
@@ -126,7 +123,7 @@ export default {
     }
   },
   computed: {
-    ...mapState(['weeklyRadarData', 'isWeeklyRadarBusy']),
+    ...mapState(['top100Data', 'isTop100Busy']),
   },
   methods: {
     toArtistProfile(row) {
@@ -145,5 +142,5 @@ export default {
       return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
     },
   },
-}
+};
 </script>

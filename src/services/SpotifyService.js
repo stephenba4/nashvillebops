@@ -12,8 +12,8 @@ class SpotifyService {
   }
 
   // eslint-disable-next-line class-methods-use-this
-  getNextUp() {
-    return http.get('/nextUp');
+  getMonthlyRecap() {
+    return http.get('/monthlyRecap');
   }
 }
 

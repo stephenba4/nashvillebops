@@ -20,29 +20,39 @@
         <h5 class="header" style="font-weight: bold;">
           Spotify
         </h5>
-        Each month we update
-        the
+        Currently we have two playlists.
+        <b-link
+          href="https://open.spotify.com/playlist/2RAgrtMEF6ZTTg2jh3FNY2"
+          target="_blank"
+          class="link"
+        >
+          Nashville Bops Weekly Radar
+        </b-link>
+        is updated weekly
+        with 10 rising Nashville pop songs.
+        And
         <b-link
           href="https://open.spotify.com/playlist/58NEDLN8pRY27qU4zkWuZV"
           target="_blank"
           class="link"
         >
-          Nashville Bops Next Up
+          Nashville Bops Monthly Recap
         </b-link>
-        playlist with 15
-        new songs from our Instagram.
+        is updated monthly
+        with 15 Nashville pop
+        songs featured
+        as Bop Of The Day last month.
         <br>
         <br>
         <h5 class="header" style="font-weight: bold;">
           Website
         </h5>
         Along with showing
-        the "Bop Of The Day" and our Spotify playlist,
-        we have the "100 Hottest Pop Artists In Nashville" chart
-        with artists we have had the opportunity to feature on
-        our Instagram. Each artist has a profile
-        where you can listen to their music and
-        learn more about them.
+        the "Bop Of The Day" and our Spotify playlists,
+        we have an artist chart showing the top 100 Nashville pop
+        artists previously featured as Bop Of The Day and an
+        artist chart for each of the playlists. You can click an
+        artist to listen to their top songs.
       </b-card>
       <b-card class="mt-4">
         <div>
