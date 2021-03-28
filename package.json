@@ -10,7 +10,6 @@
     "test": "yarn jest"
   },
   "dependencies": {
-    "@vue/cli": "^4.5.12",
     "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
     "bootstrap-vue": "^2.21.2",
