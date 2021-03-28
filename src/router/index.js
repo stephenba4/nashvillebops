@@ -1,18 +1,16 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import ArtistProfile from '@/views/ArtistProfile.vue';
-import Home from '@/views/Home.vue';
 import About from '@/views/About.vue';
-import NextUp from '@/views/NextUp.vue'
-import WeeklyRadar from '@/views/WeeklyRadar.vue'
+import PlaylistsAndCharts from '@/views/PlaylistsAndCharts.vue'
 
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home,
+    name: 'Playlists And Charts',
+    component: PlaylistsAndCharts,
   },
   {
     path: '/artistProfile',
@@ -23,16 +21,6 @@ const routes = [
     path: '/about',
     name: 'About',
     component: About,
-  },
-  {
-    path: '/nextUp',
-    name: 'Next Up',
-    component: NextUp,
-  },
-  {
-    path: '/weeklyRadar',
-    name: 'Weekly Radar',
-    component: WeeklyRadar,
   },
 ];
 

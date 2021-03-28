@@ -1,7 +1,7 @@
 <template>
   <div class="justify-content-center pt-4 pb-4">
     <b-container fluid style="max-width: 700px;">
-      <b-card>
+      <div>
         <div class="m-2">
           <b-img src="./../assets/artistProfile.png" height="30" />
         </div>
@@ -16,10 +16,10 @@
         <h2 class="m-3">
           {{ artist }}
         </h2>
-      </b-card>
+      </div>
 
       <b-card class="mt-4">
-        <h4 id="gumfont">
+        <h4>
           <i class="fa fa-spotify" />
 
           <b-img src="./../assets/followers.png" height="28" />
@@ -32,18 +32,14 @@
         <br>
 
         <div>
-          <b-img src="./../assets/social.png" height="28" />
+          <b-img src="./../assets/spotify.png" height="28" />
 
-          <b-img src="./../assets/accounts.png" height="28" />
+          <b-img src="./../assets/account.png" height="28" />
         </div>
 
-        <h4 class="m-2">
-          <b-link :href="spotify" target="_blank" class="m-2 link">
+        <h4 class="mt-3">
+          <b-link :href="spotify" target="_blank" class="link">
             <i class="fa fa-spotify" />
-          </b-link>
-
-          <b-link :href="artistData.instagram" target="_blank" class="m-2 link">
-            <b-icon icon="instagram" />
           </b-link>
         </h4>
 
@@ -70,13 +66,11 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
 
 export default {
   name: 'ArtistProfile',
   data() {
     return {
-      artistData: {},
       spotifyPlayer: '',
       id: '',
       img: '',
@@ -85,16 +79,12 @@ export default {
       spotify: '',
     }
   },
-  computed: {
-    ...mapGetters(['getSingleArtistData']),
-  },
   mounted() {
     this.id = this.$route.query.id || ''
     this.img = this.$route.query.img || ''
     this.artist = this.$route.query.artist || ''
     this.spotifyFollowers = this.$route.query.spotifyFollowers || ''
     this.spotify = this.$route.query.spotify || ''
-    this.artistData = this.getSingleArtistData(this.id)
     this.spotifyPlayer = `https://open.spotify.com/embed/artist/${this.id}`
   },
   methods: {
@@ -104,7 +94,3 @@ export default {
   },
 }
 </script>
-
-<style>
-
-</style>

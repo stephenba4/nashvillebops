@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <b-navbar id="navbar" toggleable>
-      <router-link :to="{name: 'Home'}">
+      <router-link :to="{name: 'Playlists And Charts'}">
         <b-navbar-brand>
           <b-img src="./assets/nashvillebops.png" height="40" />
         </b-navbar-brand>
@@ -16,21 +16,9 @@
 
       <b-collapse id="navbar-toggle-collapse" is-nav>
         <b-navbar-nav class="ml-auto">
-          <b-nav-item :to="{name: 'Home'}">
+          <b-nav-item :to="{name: 'Playlists And Charts'}">
             <h6>
               Home
-            </h6>
-          </b-nav-item>
-
-          <b-nav-item :to="{ name: 'Next Up' }">
-            <h6>
-              Nashville Bops Next Up
-            </h6>
-          </b-nav-item>
-
-          <b-nav-item :to="{ name: 'Weekly Radar' }">
-            <h6>
-              Nashville Bops Weekly Radar
             </h6>
           </b-nav-item>
 
@@ -46,6 +34,16 @@
     <router-view />
   </div>
 </template>
+
+<script>
+export default {
+  mounted() {
+    this.$store.dispatch('getTop100')
+    this.$store.dispatch('getWeeklyRadar')
+    this.$store.dispatch('getMonthlyRecap')
+  },
+}
+</script>
 
 <style>
 #app {
@@ -63,11 +61,20 @@
   color: #fc69c1;
   text-decoration: underline;
 }
+.link:hover {
+  color: #2c3e50;
+}
 .tables td {
   vertical-align: middle !important;
 }
 .header {
   color: #fc69c1;
+}
+.tabTitle {
+  color: #fc69c1;
+}
+.tabTitle.active, .tabTitle:hover {
+  color: #2c3e50;
 }
 
 </style>

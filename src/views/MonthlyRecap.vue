@@ -3,16 +3,16 @@
     <div>
       <div>
         <b-img src="./../assets/nashvillebops.png" height="50" />
-        <b-img src="./../assets/weekly.png" height="32" />
-        <b-img src="./../assets/radar.png" height="32" />
+        <b-img src="./../assets/monthly.png" height="32" />
+        <b-img src="./../assets/recap.png" height="32" />
       </div>
 
       <p class="mt-2">
-        10 rising Nashville pop songs
+        15 Nashville pop songs featured as Bop Of The Day last month
       </p>
 
       <iframe
-        src="https://open.spotify.com/embed/playlist/2RAgrtMEF6ZTTg2jh3FNY2"
+        src="https://open.spotify.com/embed/playlist/58NEDLN8pRY27qU4zkWuZV"
         width="250"
         height="300"
         frameborder="0"
@@ -33,7 +33,7 @@
 
       <b-table
         :fields="fields"
-        :items="weeklyRadarData"
+        :items="monthlyRecapData"
         striped
         responsive
         bordered
@@ -42,7 +42,7 @@
         :sort-desc="sortDesc"
         hover
         sticky-header="800px"
-        :busy="isWeeklyRadarBusy"
+        :busy="isMonthlyRecapBusy"
         class="tables"
         @row-clicked="toArtistProfile"
       >
@@ -113,7 +113,7 @@
 import { mapState } from 'vuex'
 
 export default {
-  name: 'WeeklyRadar',
+  name: 'MonthlyRecap',
   data() {
     return {
       fields: [
@@ -126,7 +126,7 @@ export default {
     }
   },
   computed: {
-    ...mapState(['weeklyRadarData', 'isWeeklyRadarBusy']),
+    ...mapState(['monthlyRecapData', 'isMonthlyRecapBusy']),
   },
   methods: {
     toArtistProfile(row) {
