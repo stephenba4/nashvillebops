@@ -3,7 +3,7 @@ import http from '../http-common';
 class SpotifyService {
   // eslint-disable-next-line class-methods-use-this
   getTop100() {
-    return http.get('/top100');
+    return http.get('/');
   }
 
   // eslint-disable-next-line class-methods-use-this
